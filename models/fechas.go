@@ -11,7 +11,7 @@ import (
 )
 
 type Fechas struct {
-	Id                          int                        `orm:"column(id);pk"`
+	Id                          int                        `orm:"column(id);pk;auto"`
 	Fecha                       time.Time                  `orm:"column(fecha);type(timestamp without time zone)"`
 	Activo                      bool                       `orm:"column(activo)"`
 	FechaCreacion               time.Time                  `orm:"column(fecha_creacion);type(timestamp without time zone)"`

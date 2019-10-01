@@ -11,7 +11,7 @@ import (
 )
 
 type NovedadesPoscontractuales struct {
-	Id                int       `orm:"column(id);pk"`
+	Id                int       `orm:"column(id);pk;auto"`
 	NumeroSolicitud   string    `orm:"column(numero_solicitud)"`
 	ContratoId        int       `orm:"column(contrato_id)"`
 	NumeroCdpId       int       `orm:"column(numero_cdp_id)"`
