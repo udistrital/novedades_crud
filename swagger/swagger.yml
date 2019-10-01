@@ -48,8 +48,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.Fechas'
-        "403":
-          description: ""
+        "404":
+          description: not found resource
     post:
       tags:
       - fechas
@@ -65,8 +65,8 @@ paths:
       responses:
         "201":
           description: '{int} models.Fechas'
-        "403":
-          description: body is empty
+        "400":
+          description: the request contains incorrect syntax
   /fechas/{id}:
     get:
       tags:
@@ -84,8 +84,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.Fechas'
-        "403":
-          description: :id is empty
+        "404":
+          description: not found resource
     put:
       tags:
       - fechas
@@ -108,8 +108,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.Fechas'
-        "403":
-          description: :id is not int
+        "400":
+          description: the request contains incorrect syntax
     delete:
       tags:
       - fechas
@@ -124,8 +124,8 @@ paths:
       responses:
         "200":
           description: '{string} delete success!'
-        "403":
-          description: id is empty
+        "404":
+          description: not found resource
   /novedades_poscontractuales/:
     get:
       tags:
@@ -163,8 +163,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.NovedadesPoscontractuales'
-        "403":
-          description: ""
+        "404":
+          description: not found resource
     post:
       tags:
       - novedades_poscontractuales
@@ -180,8 +180,8 @@ paths:
       responses:
         "201":
           description: '{int} models.NovedadesPoscontractuales'
-        "403":
-          description: body is empty
+        "400":
+          description: the request contains incorrect syntax
   /novedades_poscontractuales/{id}:
     get:
       tags:
@@ -199,8 +199,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.NovedadesPoscontractuales'
-        "403":
-          description: :id is empty
+        "404":
+          description: not found resource
     put:
       tags:
       - novedades_poscontractuales
@@ -223,8 +223,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.NovedadesPoscontractuales'
-        "403":
-          description: :id is not int
+        "400":
+          description: the request contains incorrect syntax
     delete:
       tags:
       - novedades_poscontractuales
@@ -239,8 +239,8 @@ paths:
       responses:
         "200":
           description: '{string} delete success!'
-        "403":
-          description: id is empty
+        "404":
+          description: not found resource
   /poliza/:
     get:
       tags:
@@ -278,8 +278,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.Poliza'
-        "403":
-          description: ""
+        "404":
+          description: not found resource
     post:
       tags:
       - poliza
@@ -295,8 +295,8 @@ paths:
       responses:
         "201":
           description: '{int} models.Poliza'
-        "403":
-          description: body is empty
+        "400":
+          description: the request contains incorrect syntax
   /poliza/{id}:
     get:
       tags:
@@ -314,8 +314,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.Poliza'
-        "403":
-          description: :id is empty
+        "404":
+          description: not found resource
     put:
       tags:
       - poliza
@@ -338,8 +338,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.Poliza'
-        "403":
-          description: :id is not int
+        "400":
+          description: the request contains incorrect syntax
     delete:
       tags:
       - poliza
@@ -354,8 +354,8 @@ paths:
       responses:
         "200":
           description: '{string} delete success!'
-        "403":
-          description: id is empty
+        "404":
+          description: not found resource
   /propiedad/:
     get:
       tags:
@@ -393,8 +393,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.Propiedad'
-        "403":
-          description: ""
+        "404":
+          description: not found resource
     post:
       tags:
       - propiedad
@@ -410,8 +410,8 @@ paths:
       responses:
         "201":
           description: '{int} models.Propiedad'
-        "403":
-          description: body is empty
+        "400":
+          description: the request contains incorrect syntax
   /propiedad/{id}:
     get:
       tags:
@@ -429,8 +429,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.Propiedad'
-        "403":
-          description: :id is empty
+        "404":
+          description: not found resource
     put:
       tags:
       - propiedad
@@ -453,8 +453,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.Propiedad'
-        "403":
-          description: :id is not int
+        "400":
+          description: the request contains incorrect syntax
     delete:
       tags:
       - propiedad
@@ -469,8 +469,8 @@ paths:
       responses:
         "200":
           description: '{string} delete success!'
-        "403":
-          description: id is empty
+        "404":
+          description: not found resource
   /tipo_fecha/:
     get:
       tags:
@@ -508,8 +508,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.TipoFecha'
-        "403":
-          description: ""
+        "404":
+          description: not found resource
     post:
       tags:
       - tipo_fecha
@@ -525,8 +525,8 @@ paths:
       responses:
         "201":
           description: '{int} models.TipoFecha'
-        "403":
-          description: body is empty
+        "400":
+          description: the request contains incorrect syntax
   /tipo_fecha/{id}:
     get:
       tags:
@@ -544,8 +544,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.TipoFecha'
-        "403":
-          description: :id is empty
+        "404":
+          description: not found resource
     put:
       tags:
       - tipo_fecha
@@ -568,8 +568,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.TipoFecha'
-        "403":
-          description: :id is not int
+        "400":
+          description: the request contains incorrect syntax
     delete:
       tags:
       - tipo_fecha
@@ -584,8 +584,8 @@ paths:
       responses:
         "200":
           description: '{string} delete success!'
-        "403":
-          description: id is empty
+        "404":
+          description: not found resource
   /tipo_novedad/:
     get:
       tags:
@@ -623,8 +623,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.TipoNovedad'
-        "403":
-          description: ""
+        "404":
+          description: not found resource
     post:
       tags:
       - tipo_novedad
@@ -640,8 +640,8 @@ paths:
       responses:
         "201":
           description: '{int} models.TipoNovedad'
-        "403":
-          description: body is empty
+        "400":
+          description: the request contains incorrect syntax
   /tipo_novedad/{id}:
     get:
       tags:
@@ -659,8 +659,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.TipoNovedad'
-        "403":
-          description: :id is empty
+        "404":
+          description: not found resource
     put:
       tags:
       - tipo_novedad
@@ -683,8 +683,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.TipoNovedad'
-        "403":
-          description: :id is not int
+        "400":
+          description: the request contains incorrect syntax
     delete:
       tags:
       - tipo_novedad
@@ -699,8 +699,8 @@ paths:
       responses:
         "200":
           description: '{string} delete success!'
-        "403":
-          description: id is empty
+        "404":
+          description: not found resource
   /tipo_propiedad/:
     get:
       tags:
@@ -738,8 +738,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.TipoPropiedad'
-        "403":
-          description: ""
+        "404":
+          description: not found resource
     post:
       tags:
       - tipo_propiedad
@@ -755,8 +755,8 @@ paths:
       responses:
         "201":
           description: '{int} models.TipoPropiedad'
-        "403":
-          description: body is empty
+        "400":
+          description: the request contains incorrect syntax
   /tipo_propiedad/{id}:
     get:
       tags:
@@ -774,8 +774,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.TipoPropiedad'
-        "403":
-          description: :id is empty
+        "404":
+          description: not found resource
     put:
       tags:
       - tipo_propiedad
@@ -798,8 +798,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.TipoPropiedad'
-        "403":
-          description: :id is not int
+        "400":
+          description: the request contains incorrect syntax
     delete:
       tags:
       - tipo_propiedad
@@ -814,8 +814,8 @@ paths:
       responses:
         "200":
           description: '{string} delete success!'
-        "403":
-          description: id is empty
+        "404":
+          description: not found resource
 definitions:
   models.Fechas:
     title: Fechas
