@@ -52,7 +52,7 @@ func GetPolizaById(id int) (v *Poliza, err error) {
 func GetAllPoliza(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(Poliza))
+	qs := o.QueryTable(new(Poliza)).RelatedSel()
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

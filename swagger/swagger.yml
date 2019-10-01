@@ -1,0 +1,1023 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+basePath: /v1
+paths:
+  /fechas/:
+    get:
+      tags:
+      - fechas
+      description: get Fechas
+      operationId: FechasController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Fechas'
+        "403":
+          description: ""
+    post:
+      tags:
+      - fechas
+      description: create Fechas
+      operationId: FechasController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Fechas content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Fechas'
+      responses:
+        "201":
+          description: '{int} models.Fechas'
+        "403":
+          description: body is empty
+  /fechas/{id}:
+    get:
+      tags:
+      - fechas
+      description: get Fechas by id
+      operationId: FechasController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Fechas'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - fechas
+      description: update the Fechas
+      operationId: FechasController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Fechas content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Fechas'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Fechas'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - fechas
+      description: delete the Fechas
+      operationId: FechasController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /novedades_poscontractuales/:
+    get:
+      tags:
+      - novedades_poscontractuales
+      description: get NovedadesPoscontractuales
+      operationId: NovedadesPoscontractualesController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.NovedadesPoscontractuales'
+        "403":
+          description: ""
+    post:
+      tags:
+      - novedades_poscontractuales
+      description: create NovedadesPoscontractuales
+      operationId: NovedadesPoscontractualesController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for NovedadesPoscontractuales content
+        required: true
+        schema:
+          $ref: '#/definitions/models.NovedadesPoscontractuales'
+      responses:
+        "201":
+          description: '{int} models.NovedadesPoscontractuales'
+        "403":
+          description: body is empty
+  /novedades_poscontractuales/{id}:
+    get:
+      tags:
+      - novedades_poscontractuales
+      description: get NovedadesPoscontractuales by id
+      operationId: NovedadesPoscontractualesController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.NovedadesPoscontractuales'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - novedades_poscontractuales
+      description: update the NovedadesPoscontractuales
+      operationId: NovedadesPoscontractualesController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for NovedadesPoscontractuales content
+        required: true
+        schema:
+          $ref: '#/definitions/models.NovedadesPoscontractuales'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.NovedadesPoscontractuales'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - novedades_poscontractuales
+      description: delete the NovedadesPoscontractuales
+      operationId: NovedadesPoscontractualesController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /poliza/:
+    get:
+      tags:
+      - poliza
+      description: get Poliza
+      operationId: PolizaController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Poliza'
+        "403":
+          description: ""
+    post:
+      tags:
+      - poliza
+      description: create Poliza
+      operationId: PolizaController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Poliza content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Poliza'
+      responses:
+        "201":
+          description: '{int} models.Poliza'
+        "403":
+          description: body is empty
+  /poliza/{id}:
+    get:
+      tags:
+      - poliza
+      description: get Poliza by id
+      operationId: PolizaController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Poliza'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - poliza
+      description: update the Poliza
+      operationId: PolizaController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Poliza content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Poliza'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Poliza'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - poliza
+      description: delete the Poliza
+      operationId: PolizaController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /propiedad/:
+    get:
+      tags:
+      - propiedad
+      description: get Propiedad
+      operationId: PropiedadController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Propiedad'
+        "403":
+          description: ""
+    post:
+      tags:
+      - propiedad
+      description: create Propiedad
+      operationId: PropiedadController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Propiedad content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Propiedad'
+      responses:
+        "201":
+          description: '{int} models.Propiedad'
+        "403":
+          description: body is empty
+  /propiedad/{id}:
+    get:
+      tags:
+      - propiedad
+      description: get Propiedad by id
+      operationId: PropiedadController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Propiedad'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - propiedad
+      description: update the Propiedad
+      operationId: PropiedadController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Propiedad content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Propiedad'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Propiedad'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - propiedad
+      description: delete the Propiedad
+      operationId: PropiedadController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /tipo_fecha/:
+    get:
+      tags:
+      - tipo_fecha
+      description: get TipoFecha
+      operationId: TipoFechaController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoFecha'
+        "403":
+          description: ""
+    post:
+      tags:
+      - tipo_fecha
+      description: create TipoFecha
+      operationId: TipoFechaController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for TipoFecha content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoFecha'
+      responses:
+        "201":
+          description: '{int} models.TipoFecha'
+        "403":
+          description: body is empty
+  /tipo_fecha/{id}:
+    get:
+      tags:
+      - tipo_fecha
+      description: get TipoFecha by id
+      operationId: TipoFechaController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoFecha'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - tipo_fecha
+      description: update the TipoFecha
+      operationId: TipoFechaController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for TipoFecha content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoFecha'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoFecha'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - tipo_fecha
+      description: delete the TipoFecha
+      operationId: TipoFechaController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /tipo_novedad/:
+    get:
+      tags:
+      - tipo_novedad
+      description: get TipoNovedad
+      operationId: TipoNovedadController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoNovedad'
+        "403":
+          description: ""
+    post:
+      tags:
+      - tipo_novedad
+      description: create TipoNovedad
+      operationId: TipoNovedadController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for TipoNovedad content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoNovedad'
+      responses:
+        "201":
+          description: '{int} models.TipoNovedad'
+        "403":
+          description: body is empty
+  /tipo_novedad/{id}:
+    get:
+      tags:
+      - tipo_novedad
+      description: get TipoNovedad by id
+      operationId: TipoNovedadController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoNovedad'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - tipo_novedad
+      description: update the TipoNovedad
+      operationId: TipoNovedadController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for TipoNovedad content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoNovedad'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoNovedad'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - tipo_novedad
+      description: delete the TipoNovedad
+      operationId: TipoNovedadController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /tipo_propiedad/:
+    get:
+      tags:
+      - tipo_propiedad
+      description: get TipoPropiedad
+      operationId: TipoPropiedadController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoPropiedad'
+        "403":
+          description: ""
+    post:
+      tags:
+      - tipo_propiedad
+      description: create TipoPropiedad
+      operationId: TipoPropiedadController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for TipoPropiedad content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoPropiedad'
+      responses:
+        "201":
+          description: '{int} models.TipoPropiedad'
+        "403":
+          description: body is empty
+  /tipo_propiedad/{id}:
+    get:
+      tags:
+      - tipo_propiedad
+      description: get TipoPropiedad by id
+      operationId: TipoPropiedadController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoPropiedad'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - tipo_propiedad
+      description: update the TipoPropiedad
+      operationId: TipoPropiedadController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for TipoPropiedad content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoPropiedad'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoPropiedad'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - tipo_propiedad
+      description: delete the TipoPropiedad
+      operationId: TipoPropiedadController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+definitions:
+  models.Fechas:
+    title: Fechas
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      Fecha:
+        type: string
+        format: datetime
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      IdNovedadesPoscontractuales:
+        $ref: '#/definitions/models.NovedadesPoscontractuales'
+      IdTipoFecha:
+        $ref: '#/definitions/models.TipoFecha'
+  models.NovedadesPoscontractuales:
+    title: NovedadesPoscontractuales
+    type: object
+    properties:
+      Aclaracion:
+        type: string
+      Activo:
+        type: boolean
+      ContratoId:
+        type: integer
+        format: int64
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      Motivo:
+        type: string
+      NumeroCdpId:
+        type: integer
+        format: int64
+      NumeroSolicitud:
+        type: string
+      Observacion:
+        type: string
+      TipoNovedad:
+        type: integer
+        format: int64
+      Vigencia:
+        type: integer
+        format: int64
+      VigenciaCdp:
+        type: integer
+        format: int64
+  models.Poliza:
+    title: Poliza
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      EntidadAseguradoraId:
+        type: integer
+        format: int64
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      IdNovedadesPoscontractuales:
+        $ref: '#/definitions/models.NovedadesPoscontractuales'
+      NumeroPolizaId:
+        type: string
+  models.Propiedad:
+    title: Propiedad
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      IdNovedadesPoscontractuales:
+        $ref: '#/definitions/models.NovedadesPoscontractuales'
+      IdTipoPropiedad:
+        $ref: '#/definitions/models.TipoPropiedad'
+      Propiedad:
+        type: integer
+        format: int64
+  models.TipoFecha:
+    title: TipoFecha
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      CodigoAbreviacion:
+        type: string
+      Descripcion:
+        type: string
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      NumeroOrden:
+        type: number
+        format: double
+      TipoNovedad:
+        type: integer
+        format: int64
+  models.TipoNovedad:
+    title: TipoNovedad
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      CodigoAbreviacion:
+        type: string
+      Descripcion:
+        type: string
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      NumeroOrden:
+        type: number
+        format: double
+  models.TipoPropiedad:
+    title: TipoPropiedad
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      CodigoAbreviacion:
+        type: string
+      Descripcion:
+        type: string
+      FechaCreacion:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      NumeroOrden:
+        type: number
+        format: double
+      TipoNovedad:
+        type: integer
+        format: int32
+tags:
+- name: novedades_poscontractuales
+  description: |
+    NovedadesPoscontractualesController operations for NovedadesPoscontractuales
+- name: tipo_fecha
+  description: |
+    TipoFechaController operations for TipoFecha
+- name: tipo_propiedad
+  description: |
+    TipoPropiedadController operations for TipoPropiedad
+- name: fechas
+  description: |
+    FechasController operations for Fechas
+- name: poliza
+  description: |
+    PolizaController operations for Poliza
+- name: propiedad
+  description: |
+    PropiedadController operations for Propiedad
+- name: tipo_novedad
+  description: |
+    TipoNovedadController operations for TipoNovedad
