@@ -1388,12 +1388,10 @@
                     "type": "string"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -1426,12 +1424,10 @@
                     "type": "string"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -1460,12 +1456,10 @@
                     "type": "string"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",

@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"github.com/udistrital/novedades_crud/models"
+	"github.com/udistrital/utils_oas/time_bogota"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
@@ -34,8 +35,11 @@ func (c *TipoNovedadController) URLMapping() {
 // @Failure 400 the request contains incorrect syntax
 // @router / [post]
 func (c *TipoNovedadController) Post() {
+	horaRegistro := time_bogota.TiempoBogotaFormato()
 	var v models.TipoNovedad
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
+		v.FechaCreacion = horaRegistro
+		v.FechaModificacion = horaRegistro
 		if _, err := models.AddTipoNovedad(&v); err == nil {
 			c.Ctx.Output.SetStatus(201)
 			c.Data["json"] = v

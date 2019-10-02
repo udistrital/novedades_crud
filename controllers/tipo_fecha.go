@@ -3,6 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
 	"strconv"
 	"strings"
 
@@ -10,6 +11,7 @@ import (
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
+	"github.com/udistrital/utils_oas/time_bogota"
 )
 
 // TipoFechaController operations for TipoFecha
@@ -34,8 +36,12 @@ func (c *TipoFechaController) URLMapping() {
 // @Failure 400 the request contains incorrect syntax
 // @router / [post]
 func (c *TipoFechaController) Post() {
+	horaRegistro := time_bogota.TiempoBogotaFormato()
 	var v models.TipoFecha
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
+		v.FechaCreacion = horaRegistro
+		v.FechaModificacion = horaRegistro
+		fmt.Println("resultado ", v)
 		if _, err := models.AddTipoFecha(&v); err == nil {
 			c.Ctx.Output.SetStatus(201)
 			c.Data["json"] = v
