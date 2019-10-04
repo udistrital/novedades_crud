@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"time"
 
 	"github.com/astaxie/beego/orm"
 )
@@ -14,8 +13,8 @@ type Propiedad struct {
 	Id                          int                        `orm:"column(id);pk;auto"`
 	Propiedad                   int                        `orm:"column(propiedad)"`
 	Activo                      bool                       `orm:"column(activo)"`
-	FechaCreacion               time.Time                  `orm:"column(fecha_creacion);type(timestamp without time zone)"`
-	FechaModificacion           time.Time                  `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
+	FechaCreacion               string                     `orm:"column(fecha_creacion);type(timestamp without time zone)"`
+	FechaModificacion           string                     `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
 	IdTipoPropiedad             *TipoPropiedad             `orm:"column(id_tipo_propiedad);rel(fk)"`
 	IdNovedadesPoscontractuales *NovedadesPoscontractuales `orm:"column(id_novedades_poscontractuales);rel(fk)"`
 }

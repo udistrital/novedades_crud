@@ -1225,9 +1225,45 @@
                     }
                 }
             }
+        },
+        "/trNovedad/": {
+            "post": {
+                "tags": [
+                    "trNovedad"
+                ],
+                "description": "create Tr_novedad_poscontractual",
+                "operationId": "Tr_novedad_poscontractualController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Tr_novedad_poscontractual content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TrNovedadesPoscontractuales"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.TrNovedadesPoscontractuales"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
         }
     },
     "definitions": {
+        "18194.\u003cnil\u003e.Fechas": {
+            "title": "Fechas",
+            "type": "object"
+        },
+        "18227.\u003cnil\u003e.Propiedad": {
+            "title": "Propiedad",
+            "type": "object"
+        },
         "models.Fechas": {
             "title": "Fechas",
             "type": "object",
@@ -1236,16 +1272,13 @@
                     "type": "boolean"
                 },
                 "Fecha": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -1274,12 +1307,10 @@
                     "format": "int64"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -1351,12 +1382,10 @@
                     "type": "boolean"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -1477,6 +1506,21 @@
                     "format": "int32"
                 }
             }
+        },
+        "models.TrNovedadesPoscontractuales": {
+            "title": "TrNovedadesPoscontractuales",
+            "type": "object",
+            "properties": {
+                "Fechas": {
+                    "$ref": "#/definitions/18194.\u003cnil\u003e.Fechas"
+                },
+                "NovedadPoscontractual": {
+                    "$ref": "#/definitions/models.NovedadesPoscontractuales"
+                },
+                "Propiedad": {
+                    "$ref": "#/definitions/18227.\u003cnil\u003e.Propiedad"
+                }
+            }
         }
     },
     "tags": [
@@ -1507,6 +1551,10 @@
         {
             "name": "tipo_novedad",
             "description": "TipoNovedadController operations for TipoNovedad\n"
+        },
+        {
+            "name": "trNovedad",
+            "description": " Tr_novedad_poscontractualController operations for Tr_novedad_poscontractual\n"
         }
     ]
 }

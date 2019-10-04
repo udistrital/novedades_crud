@@ -816,7 +816,31 @@ paths:
           description: '{string} delete success!'
         "404":
           description: not found resource
+  /trNovedad/:
+    post:
+      tags:
+      - trNovedad
+      description: create Tr_novedad_poscontractual
+      operationId: Tr_novedad_poscontractualController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Tr_novedad_poscontractual content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TrNovedadesPoscontractuales'
+      responses:
+        "201":
+          description: '{int} models.TrNovedadesPoscontractuales'
+        "403":
+          description: body is empty
 definitions:
+  18194.<nil>.Fechas:
+    title: Fechas
+    type: object
+  18227.<nil>.Propiedad:
+    title: Propiedad
+    type: object
   models.Fechas:
     title: Fechas
     type: object
@@ -825,13 +849,10 @@ definitions:
         type: boolean
       Fecha:
         type: string
-        format: datetime
       FechaCreacion:
         type: string
-        format: datetime
       FechaModificacion:
         type: string
-        format: datetime
       Id:
         type: integer
         format: int64
@@ -852,10 +873,8 @@ definitions:
         format: int64
       FechaCreacion:
         type: string
-        format: datetime
       FechaModificacion:
         type: string
-        format: datetime
       Id:
         type: integer
         format: int64
@@ -907,10 +926,8 @@ definitions:
         type: boolean
       FechaCreacion:
         type: string
-        format: datetime
       FechaModificacion:
         type: string
-        format: datetime
       Id:
         type: integer
         format: int64
@@ -993,6 +1010,16 @@ definitions:
       TipoNovedad:
         type: integer
         format: int32
+  models.TrNovedadesPoscontractuales:
+    title: TrNovedadesPoscontractuales
+    type: object
+    properties:
+      Fechas:
+        $ref: '#/definitions/18194.<nil>.Fechas'
+      NovedadPoscontractual:
+        $ref: '#/definitions/models.NovedadesPoscontractuales'
+      Propiedad:
+        $ref: '#/definitions/18227.<nil>.Propiedad'
 tags:
 - name: novedades_poscontractuales
   description: |
@@ -1015,3 +1042,6 @@ tags:
 - name: tipo_novedad
   description: |
     TipoNovedadController operations for TipoNovedad
+- name: trNovedad
+  description: |2
+     Tr_novedad_poscontractualController operations for Tr_novedad_poscontractual
