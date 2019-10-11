@@ -54,6 +54,36 @@ func (c *Tr_novedad_poscontractualController) Post() {
 	c.ServeJSON()
 }
 
+// Post ...
+// @Title Post
+// @Description Transacción para crear novedad con poliza
+// @Param	body		body 	models.TrNovedadesPoscontractualesPoliza	true		"body for Tr_novedad_poscontractual content"
+// @Success 201 {int} models.TrNovedadesPoscontractualesPoliza
+// @Failure 403 body is empty
+// @router /trnovedadpoliza/ [post]
+func (c *Tr_novedad_poscontractualController) PostPoliza() {
+	var v models.TrNovedadesPoscontractualesPoliza
+	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
+		fmt.Println("1")
+		if err := models.AddTransaccionNovedadPoscontractualPoliza(&v); err == nil {
+			fmt.Println("2")
+			c.Ctx.Output.SetStatus(201)
+			c.Data["json"] = v
+		} else {
+			logs.Error(err)
+			//c.Data["development"] = map[string]interface{}{"Code": "000", "Body": err.Error(), "Type": "error"}
+			c.Data["system"] = err
+			c.Abort("400")
+		}
+	} else {
+		logs.Error(err)
+		//c.Data["development"] = map[string]interface{}{"Code": "000", "Body": err.Error(), "Type": "error"}
+		c.Data["system"] = err
+		c.Abort("400")
+	}
+	c.ServeJSON()
+}
+
 // GetOne ...
 // @Title Get One
 // @Description get Tr_novedad_poscontractual by id

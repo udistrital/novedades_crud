@@ -1253,15 +1253,55 @@
                     }
                 }
             }
+        },
+        "/trNovedad/trnovedadpoliza/": {
+            "post": {
+                "tags": [
+                    "trNovedad"
+                ],
+                "description": "Transacción para crear novedad con poliza",
+                "operationId": "Tr_novedad_poscontractualController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Tr_novedad_poscontractual content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TrNovedadesPoscontractualesPoliza"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.TrNovedadesPoscontractualesPoliza"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
         }
     },
     "definitions": {
-        "18194.\u003cnil\u003e.Fechas": {
+        "18186.\u003cnil\u003e.Fechas": {
             "title": "Fechas",
             "type": "object"
         },
-        "18227.\u003cnil\u003e.Propiedad": {
+        "18219.\u003cnil\u003e.Propiedad": {
             "title": "Propiedad",
+            "type": "object"
+        },
+        "18388.\u003cnil\u003e.Fechas": {
+            "title": "Fechas",
+            "type": "object"
+        },
+        "18421.\u003cnil\u003e.Propiedad": {
+            "title": "Propiedad",
+            "type": "object"
+        },
+        "18457.\u003cnil\u003e.Poliza": {
+            "title": "Poliza",
             "type": "object"
         },
         "models.Fechas": {
@@ -1355,12 +1395,10 @@
                     "format": "int64"
                 },
                 "FechaCreacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -1512,13 +1550,31 @@
             "type": "object",
             "properties": {
                 "Fechas": {
-                    "$ref": "#/definitions/18194.\u003cnil\u003e.Fechas"
+                    "$ref": "#/definitions/18186.\u003cnil\u003e.Fechas"
                 },
                 "NovedadPoscontractual": {
                     "$ref": "#/definitions/models.NovedadesPoscontractuales"
                 },
                 "Propiedad": {
-                    "$ref": "#/definitions/18227.\u003cnil\u003e.Propiedad"
+                    "$ref": "#/definitions/18219.\u003cnil\u003e.Propiedad"
+                }
+            }
+        },
+        "models.TrNovedadesPoscontractualesPoliza": {
+            "title": "TrNovedadesPoscontractualesPoliza",
+            "type": "object",
+            "properties": {
+                "Fechas": {
+                    "$ref": "#/definitions/18388.\u003cnil\u003e.Fechas"
+                },
+                "NovedadPoscontractual": {
+                    "$ref": "#/definitions/models.NovedadesPoscontractuales"
+                },
+                "Poliza": {
+                    "$ref": "#/definitions/18457.\u003cnil\u003e.Poliza"
+                },
+                "Propiedad": {
+                    "$ref": "#/definitions/18421.\u003cnil\u003e.Propiedad"
                 }
             }
         }

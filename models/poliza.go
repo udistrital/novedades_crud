@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"time"
 
 	"github.com/astaxie/beego/orm"
 )
@@ -14,8 +13,8 @@ type Poliza struct {
 	Id                          int                        `orm:"column(id);pk;auto"`
 	NumeroPolizaId              string                     `orm:"column(numero_poliza_id);null"`
 	EntidadAseguradoraId        int                        `orm:"column(entidad_aseguradora_id);null"`
-	FechaCreacion               time.Time                  `orm:"column(fecha_creacion);type(timestamp without time zone)"`
-	FechaModificacion           time.Time                  `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
+	FechaCreacion               string                     `orm:"column(fecha_creacion);type(timestamp without time zone)"`
+	FechaModificacion           string                     `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
 	Activo                      bool                       `orm:"column(activo)"`
 	IdNovedadesPoscontractuales *NovedadesPoscontractuales `orm:"column(id_novedades_poscontractuales);rel(fk)"`
 }

@@ -834,12 +834,39 @@ paths:
           description: '{int} models.TrNovedadesPoscontractuales'
         "403":
           description: body is empty
+  /trNovedad/trnovedadpoliza/:
+    post:
+      tags:
+      - trNovedad
+      description: Transacción para crear novedad con poliza
+      operationId: Tr_novedad_poscontractualController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Tr_novedad_poscontractual content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TrNovedadesPoscontractualesPoliza'
+      responses:
+        "201":
+          description: '{int} models.TrNovedadesPoscontractualesPoliza'
+        "403":
+          description: body is empty
 definitions:
-  18194.<nil>.Fechas:
+  18186.<nil>.Fechas:
     title: Fechas
     type: object
-  18227.<nil>.Propiedad:
+  18219.<nil>.Propiedad:
     title: Propiedad
+    type: object
+  18388.<nil>.Fechas:
+    title: Fechas
+    type: object
+  18421.<nil>.Propiedad:
+    title: Propiedad
+    type: object
+  18457.<nil>.Poliza:
+    title: Poliza
     type: object
   models.Fechas:
     title: Fechas
@@ -907,10 +934,8 @@ definitions:
         format: int64
       FechaCreacion:
         type: string
-        format: datetime
       FechaModificacion:
         type: string
-        format: datetime
       Id:
         type: integer
         format: int64
@@ -1015,11 +1040,23 @@ definitions:
     type: object
     properties:
       Fechas:
-        $ref: '#/definitions/18194.<nil>.Fechas'
+        $ref: '#/definitions/18186.<nil>.Fechas'
       NovedadPoscontractual:
         $ref: '#/definitions/models.NovedadesPoscontractuales'
       Propiedad:
-        $ref: '#/definitions/18227.<nil>.Propiedad'
+        $ref: '#/definitions/18219.<nil>.Propiedad'
+  models.TrNovedadesPoscontractualesPoliza:
+    title: TrNovedadesPoscontractualesPoliza
+    type: object
+    properties:
+      Fechas:
+        $ref: '#/definitions/18388.<nil>.Fechas'
+      NovedadPoscontractual:
+        $ref: '#/definitions/models.NovedadesPoscontractuales'
+      Poliza:
+        $ref: '#/definitions/18457.<nil>.Poliza'
+      Propiedad:
+        $ref: '#/definitions/18421.<nil>.Propiedad'
 tags:
 - name: novedades_poscontractuales
   description: |
