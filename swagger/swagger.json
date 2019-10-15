@@ -1276,8 +1276,8 @@
                     "201": {
                         "description": "{int} models.TrNovedadesPoscontractualesPoliza"
                     },
-                    "403": {
-                        "description": "body is empty"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             }

@@ -850,8 +850,8 @@ paths:
       responses:
         "201":
           description: '{int} models.TrNovedadesPoscontractualesPoliza'
-        "403":
-          description: body is empty
+        "400":
+          description: the request contains incorrect syntax
 definitions:
   18186.<nil>.Fechas:
     title: Fechas

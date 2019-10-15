@@ -21,16 +21,18 @@ type TrNovedadesPoscontractualesPoliza struct {
 }
 
 // AddTransaccionProyectoAcademica Transacción para registrar toda la información de un proyecto academico
-func AddTransaccionNovedadPoscontractualNoPoliza(m *TrNovedadesPoscontractuales) (err error) {
+func AddTransaccionNovedadPoscontractualNoPoliza(m *TrNovedadesPoscontractuales) (err error, id int) {
 	o := orm.NewOrm()
 	err = o.Begin()
 
 	horaRegistro := time_bogota.TiempoBogotaFormato()
 	m.NovedadPoscontractual.FechaCreacion = horaRegistro
 	m.NovedadPoscontractual.FechaModificacion = horaRegistro
+	var idnovedadregistro int = 0
 
 	if idNovedad, errTr := o.Insert(m.NovedadPoscontractual); errTr == nil {
 		fmt.Println(idNovedad)
+		idnovedadregistro = int(idNovedad)
 
 		for _, v := range *m.Fechas {
 			v.IdNovedadesPoscontractuales.Id = int(idNovedad)
@@ -40,7 +42,7 @@ func AddTransaccionNovedadPoscontractualNoPoliza(m *TrNovedadesPoscontractuales)
 				err = errTr
 				fmt.Println(err)
 				_ = o.Rollback()
-				return
+				return errTr, 0
 			}
 		}
 
@@ -52,7 +54,7 @@ func AddTransaccionNovedadPoscontractualNoPoliza(m *TrNovedadesPoscontractuales)
 				err = errTr
 				fmt.Println(err)
 				_ = o.Rollback()
-				return
+				return errTr, 0
 			}
 		}
 
@@ -63,20 +65,22 @@ func AddTransaccionNovedadPoscontractualNoPoliza(m *TrNovedadesPoscontractuales)
 		_ = o.Rollback()
 	}
 
-	return
+	return nil, idnovedadregistro
 }
 
 // AddTransaccionProyectoAcademica Transacción para registrar toda la información de un proyecto academico
-func AddTransaccionNovedadPoscontractualPoliza(m *TrNovedadesPoscontractualesPoliza) (err error) {
+func AddTransaccionNovedadPoscontractualPoliza(m *TrNovedadesPoscontractualesPoliza) (err error, id int) {
 	o := orm.NewOrm()
 	err = o.Begin()
 
 	horaRegistro := time_bogota.TiempoBogotaFormato()
 	m.NovedadPoscontractual.FechaCreacion = horaRegistro
 	m.NovedadPoscontractual.FechaModificacion = horaRegistro
+	var idnovedadregistro int = 0
 
 	if idNovedad, errTr := o.Insert(m.NovedadPoscontractual); errTr == nil {
 		fmt.Println(idNovedad)
+		idnovedadregistro = int(idNovedad)
 
 		for _, v := range *m.Fechas {
 			v.IdNovedadesPoscontractuales.Id = int(idNovedad)
@@ -86,7 +90,7 @@ func AddTransaccionNovedadPoscontractualPoliza(m *TrNovedadesPoscontractualesPol
 				err = errTr
 				fmt.Println(err)
 				_ = o.Rollback()
-				return
+				return errTr, 0
 			}
 		}
 
@@ -98,7 +102,7 @@ func AddTransaccionNovedadPoscontractualPoliza(m *TrNovedadesPoscontractualesPol
 				err = errTr
 				fmt.Println(err)
 				_ = o.Rollback()
-				return
+				return errTr, 0
 			}
 		}
 
@@ -110,7 +114,7 @@ func AddTransaccionNovedadPoscontractualPoliza(m *TrNovedadesPoscontractualesPol
 				err = errTr
 				fmt.Println(err)
 				_ = o.Rollback()
-				return
+				return errTr, 0
 			}
 		}
 
@@ -121,5 +125,5 @@ func AddTransaccionNovedadPoscontractualPoliza(m *TrNovedadesPoscontractualesPol
 		_ = o.Rollback()
 	}
 
-	return
+	return nil, idnovedadregistro
 }

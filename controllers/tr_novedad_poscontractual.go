@@ -35,9 +35,11 @@ func (c *Tr_novedad_poscontractualController) Post() {
 	var v models.TrNovedadesPoscontractuales
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
 		fmt.Println("1")
-		if err := models.AddTransaccionNovedadPoscontractualNoPoliza(&v); err == nil {
+		if err, idnovedad := models.AddTransaccionNovedadPoscontractualNoPoliza(&v); err == nil {
 			fmt.Println("2")
 			c.Ctx.Output.SetStatus(201)
+			v.NovedadPoscontractual.Id = idnovedad
+			fmt.Println("Aqui se muestra Id de la inserción \n", idnovedad)
 			c.Data["json"] = v
 		} else {
 			logs.Error(err)
@@ -59,20 +61,26 @@ func (c *Tr_novedad_poscontractualController) Post() {
 // @Description Transacción para crear novedad con poliza
 // @Param	body		body 	models.TrNovedadesPoscontractualesPoliza	true		"body for Tr_novedad_poscontractual content"
 // @Success 201 {int} models.TrNovedadesPoscontractualesPoliza
-// @Failure 403 body is empty
+// @Failure 400 the request contains incorrect syntax
 // @router /trnovedadpoliza/ [post]
 func (c *Tr_novedad_poscontractualController) PostPoliza() {
 	var v models.TrNovedadesPoscontractualesPoliza
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
 		fmt.Println("1")
-		if err := models.AddTransaccionNovedadPoscontractualPoliza(&v); err == nil {
+		if err, idnovedad := models.AddTransaccionNovedadPoscontractualPoliza(&v); err == nil {
 			fmt.Println("2")
 			c.Ctx.Output.SetStatus(201)
+			v.NovedadPoscontractual.Id = idnovedad
+			fmt.Println("Aqui se muestra Id de la inserción \n", idnovedad)
+			fmt.Println(v)
 			c.Data["json"] = v
 		} else {
 			logs.Error(err)
 			//c.Data["development"] = map[string]interface{}{"Code": "000", "Body": err.Error(), "Type": "error"}
 			c.Data["system"] = err
+			c.Data["Code"] = 400
+			c.Ctx.Output.SetStatus(400)
+			fmt.Println("entro al error en el crud")
 			c.Abort("400")
 		}
 	} else {
@@ -80,6 +88,7 @@ func (c *Tr_novedad_poscontractualController) PostPoliza() {
 		//c.Data["development"] = map[string]interface{}{"Code": "000", "Body": err.Error(), "Type": "error"}
 		c.Data["system"] = err
 		c.Abort("400")
+		c.Ctx.Output.SetStatus(400)
 	}
 	c.ServeJSON()
 }
