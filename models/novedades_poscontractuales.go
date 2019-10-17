@@ -5,25 +5,24 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"time"
 
 	"github.com/astaxie/beego/orm"
 )
 
 type NovedadesPoscontractuales struct {
-	Id                int       `orm:"column(id);pk"`
-	NumeroSolicitud   string    `orm:"column(numero_solicitud)"`
-	ContratoId        int       `orm:"column(contrato_id)"`
-	NumeroCdpId       int       `orm:"column(numero_cdp_id)"`
-	Motivo            string    `orm:"column(motivo);null"`
-	Aclaracion        string    `orm:"column(aclaracion);null"`
-	Observacion       string    `orm:"column(observacion);null"`
-	Vigencia          int       `orm:"column(vigencia)"`
-	VigenciaCdp       int       `orm:"column(vigencia_cdp)"`
-	FechaCreacion     time.Time `orm:"column(fecha_creacion);type(timestamp without time zone)"`
-	FechaModificacion time.Time `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
-	Activo            bool      `orm:"column(activo)"`
-	TipoNovedad       int       `orm:"column(tipo_novedad)"`
+	Id                int    `orm:"column(id);pk;auto"`
+	NumeroSolicitud   string `orm:"column(numero_solicitud)"`
+	ContratoId        int    `orm:"column(contrato_id)"`
+	NumeroCdpId       int    `orm:"column(numero_cdp_id)"`
+	Motivo            string `orm:"column(motivo);null"`
+	Aclaracion        string `orm:"column(aclaracion);null"`
+	Observacion       string `orm:"column(observacion);null"`
+	Vigencia          int    `orm:"column(vigencia)"`
+	VigenciaCdp       int    `orm:"column(vigencia_cdp)"`
+	FechaCreacion     string `orm:"column(fecha_creacion);type(timestamp without time zone)"`
+	FechaModificacion string `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
+	Activo            bool   `orm:"column(activo)"`
+	TipoNovedad       int    `orm:"column(tipo_novedad)"`
 }
 
 func (t *NovedadesPoscontractuales) TableName() string {
@@ -58,7 +57,7 @@ func GetNovedadesPoscontractualesById(id int) (v *NovedadesPoscontractuales, err
 func GetAllNovedadesPoscontractuales(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(NovedadesPoscontractuales))
+	qs := o.QueryTable(new(NovedadesPoscontractuales)).RelatedSel()
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute
