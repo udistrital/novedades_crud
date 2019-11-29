@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"github.com/udistrital/novedades_crud/models"
+	"github.com/udistrital/utils_oas/time_bogota"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
@@ -157,6 +158,8 @@ func (c *PolizaController) Put() {
 	idStr := c.Ctx.Input.Param(":id")
 	id, _ := strconv.Atoi(idStr)
 	v := models.Poliza{Id: id}
+	horaModificacion := time_bogota.TiempoBogotaFormato()
+	v.FechaModificacion = horaModificacion
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
 		if err := models.UpdatePolizaById(&v); err == nil {
 			c.Data["json"] = v
