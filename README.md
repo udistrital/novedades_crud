@@ -1,6 +1,8 @@
 # novedades_crud
 novedades_crud, API crud con modelo relacional en postgresSQL, el proyecto está programado en el lenguaje Go y creado con el [framework beego](https://beego.me/).
 
+el api provee la gestion de las diferentes novedades que puedan ser creadas en el sistemas
+
 ***Instlaciones Previas:***
 * [Golang](https://github.com/udistrital/introduccion_oas/blob/master/instalacion_de_herramientas/golang.md)
 * [BeeGo](https://github.com/udistrital/introduccion_oas/blob/master/instalacion_de_herramientas/beego.md)
@@ -38,40 +40,35 @@ Para instalar el proyecto realizar los siguientes pasos:
     go get
 ```
 
-## Variables de entorno 
-
-* El puerto por el que se expone la api **httpport = 8080**; si se cambia de puerto se debe editar la configuración en el [cliente](https://github.com/udistrital/novedades_cliente), especificamente la varible de entorno NOVEDADES_CRUD_SERVICE.
-* La variable de entorno corresponde al puerto en donde se desplegará el API y corresponde a la siguiente :
-```shell 
-    NOVEDADES_CRUD_HTTP_PORT=8080
-```
-
 ## Ejecución del proyecto
 
 * Ubicado en la raíz del proyecto, ejecutar:
-```shell 
-    NOVEDADES_API_HTTP_PORT=8080 bee run
+```bash
+    NOVEDADES_CRUD__PGDB=[nombre de la base de datos] NOVEDADES_CRUD__PGPASS=[password del usuario] NOVEDADES_CRUD__PGURLS[direccion de la base de datos] NOVEDADES_CRUD__PGUSER=[usuario con acceso a la base de datos] NOVEDADES_CRUD__PGSCHEMA=[esquema donde se ubican las tablas] NOVEDADES_HTTP_PORT=[puerto de ejecucion] bee run
 ```
 * O si se quiere ejecutar el swager:
 ```shell 
-    NOVEDADES_API_HTTP_PORT=8080 bee run -downdoc=true -gendoc=true
+    NOVEDADES_CRUD__PGDB=[nombre de la base de datos] NOVEDADES_CRUD__PGPASS=[password del usuario] NOVEDADES_CRUD__PGURLS[direccion de la base de datos] NOVEDADES_CRUD__PGUSER=[usuario con acceso a la base de datos] NOVEDADES_CRUD__PGSCHEMA=[esquema donde se ubican las tablas] NOVEDADES_HTTP_PORT=[puerto de ejecucion] bee run -downdoc=true -gendoc=true
 ```
 
 ### Puertos
 
-* El servidor se expone en el puerto: localhost:8080
+* El servidor se expone por defecto en el puerto: localhost:8080
 
 * Para ver la documentación de swagger: [localhost:8080/swagger/](http://localhost:8080/swagger/)
     *Nota*: En el swagger sale un error, hacer caso omiso.
 
 ### EndPoints
 
-Cada controlador tiene los metodos :
-* Post
- los endpoint a los cuales apuntar son los siguientes:
+Al ejecutar el swagger se puede tener mayor apreciacion de los diferentes metodos de peticion por cada endpoint cuales son los distinpos endpoint disponibles y como usarlos.
 
 
-||End Point|
-|----------------|------------------------|
-| **registroNovedad** | `[host de la maquina]:[puerto]/v1/trNovedad` |
+## Licencia
 
+This file is part of cumplidos-cliente.
+
+cumplidos-cliente is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Foobar is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
