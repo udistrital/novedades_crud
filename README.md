@@ -38,8 +38,6 @@ go get
 
 ### Variables de Entorno
 
-* Ubicado en la raíz del proyecto, ejecutar:
-
 - NOVEDADES_CRUD__PGDB=[nombre de la base de datos]
 - NOVEDADES_CRUD__PGPASS=[password del usuario]
 - NOVEDADES_CRUD__PGURLS=[direccion de la base de datos]
