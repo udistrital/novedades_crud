@@ -10,29 +10,24 @@ el api provee la gestion de las diferentes novedades que puedan ser creadas en e
 
 ## Especificaciones Técnicas
 
-### Opción 1
-Ejecutar desde la terminal 'go get repositorio':
+### Instalación
+
+#### Opción 1
 ```shell
 go get github.com/udistrital/novedades_crud
 ```
-### Opción 2
-Para instalar el proyecto realizar los siguientes pasos:
-- Para clonar el proyecto en la carpeta local go/src/github.com/udistrital ir a la consola y ejecutar:
+#### Opción 2
 ```shell
+# Para clonar el proyecto en la carpeta local go/src/github.com/udistrital
 cd go/src/github.com/udistrital
-```
-- Ejecutar:
-```shell
+
+# clonar repo
 git clone https://github.com/udistrital/novedades_crud.git
-```
 
-- Ir a la carpeta del proyecto:
-```shell
+#  Ir a la carpeta del proyecto
 cd novedades_crud
-```
 
-- Instalar dependencias del proyecto:
-```shell
+# Instalar dependencias del proyecto
 go get
 ```
 
@@ -50,11 +45,11 @@ go get
 
 * Ubicado en la raíz del proyecto, ejecutar:
 ```bash
-    NOVEDADES_CRUD__PGDB=XXX NOVEDADES_CRUD__PGPASS=XXX NOVEDADES_CRUD__PGURLS=XXX NOVEDADES_CRUD__PGUSER=XXX NOVEDADES_CRUD__PGSCHEMA=XXX NOVEDADES_HTTP_PORT=XXX bee run
+NOVEDADES_CRUD__PGDB=XXX NOVEDADES_CRUD__PGPASS=XXX NOVEDADES_CRUD__PGURLS=XXX NOVEDADES_CRUD__PGUSER=XXX NOVEDADES_CRUD__PGSCHEMA=XXX NOVEDADES_HTTP_PORT=XXX bee run
 ```
 * O si se quiere ejecutar el swager:
 ```shell
-    NOVEDADES_CRUD__PGDB=XXX NOVEDADES_CRUD__PGPASS=XXX NOVEDADES_CRUD__PGURLS=XXX NOVEDADES_CRUD__PGUSER=XXX NOVEDADES_CRUD__PGSCHEMA=XXX NOVEDADES_HTTP_PORT=XXX bee run -downdoc=true -gendoc=true
+NOVEDADES_CRUD__PGDB=XXX NOVEDADES_CRUD__PGPASS=XXX NOVEDADES_CRUD__PGURLS=XXX NOVEDADES_CRUD__PGUSER=XXX NOVEDADES_CRUD__PGSCHEMA=XXX NOVEDADES_HTTP_PORT=XXX bee run -downdoc=true -gendoc=true
 ```
 
 ### Puertos
@@ -71,13 +66,13 @@ Al ejecutar el swagger se puede tener mayor apreciacion de los diferentes metodo
 ### Modelo de datos de novedades_crud
 El modelo de datos del API crud de novedades se muestra en la siguiente imágen:
 ![novedades](https://user-images.githubusercontent.com/28914781/65917368-d0438500-e39c-11e9-8831-c13f4048309f.png)
-  
+
 
 ## Licencia
 
-This file is part of cumplidos-cliente.
+This file is part of novedades_crud.
 
-cumplidos-cliente is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+novedades_crud is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
 Foobar is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
