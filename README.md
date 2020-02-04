@@ -31,33 +31,35 @@ cd novedades_crud
 go get
 ```
 
+
 ### Variables de Entorno
-
-- NOVEDADES_CRUD__PGDB=[nombre de la base de datos]
-- NOVEDADES_CRUD__PGPASS=[password del usuario]
-- NOVEDADES_CRUD__PGURLS=[direccion de la base de datos]
-- NOVEDADES_CRUD__PGUSER=[usuario con acceso a la base de datos]
-- NOVEDADES_CRUD__PGSCHEMA=[esquema donde se ubican las tablas]
-- NOVEDADES_HTTP_PORT=[puerto de ejecucion] bee run
-
+```bash
+NOVEDADES_CRUD__PGDB=[nombre de la base de datos]
+NOVEDADES_CRUD__PGPASS=[password del usuario]
+NOVEDADES_CRUD__PGURLS=[direccion de la base de datos]
+NOVEDADES_CRUD__PGUSER=[usuario con acceso a la base de datos]
+NOVEDADES_CRUD__PGSCHEMA=[esquema donde se ubican las tablas]
+NOVEDADES_HTTP_PORT=[puerto de ejecucion] bee run
+```
 
 ### Ejecución del proyecto
 
-* Ubicado en la raíz del proyecto, ejecutar:
+Ubicado en la raíz del proyecto, ejecutar:
 ```bash
 NOVEDADES_CRUD__PGDB=XXX NOVEDADES_CRUD__PGPASS=XXX NOVEDADES_CRUD__PGURLS=XXX NOVEDADES_CRUD__PGUSER=XXX NOVEDADES_CRUD__PGSCHEMA=XXX NOVEDADES_HTTP_PORT=XXX bee run
 ```
-* O si se quiere ejecutar el swager:
+O si se quiere ejecutar el swager:
 ```shell
 NOVEDADES_CRUD__PGDB=XXX NOVEDADES_CRUD__PGPASS=XXX NOVEDADES_CRUD__PGURLS=XXX NOVEDADES_CRUD__PGUSER=XXX NOVEDADES_CRUD__PGSCHEMA=XXX NOVEDADES_HTTP_PORT=XXX bee run -downdoc=true -gendoc=true
 ```
 
 ### Puertos
 
-* El servidor se expone por defecto en el puerto: localhost:8080
+El servidor se expone por defecto en el puerto: localhost:8080
 
-* Para ver la documentación de swagger: [localhost:8080/swagger/](http://localhost:8080/swagger/)
-    *Nota*: En el swagger sale un error, hacer caso omiso.
+Para ver la documentación de swagger: [localhost:8080/swagger/](http://localhost:8080/swagger/)
+
+**Nota**: *En el swagger sale un error, hacer caso omiso.*
 
 ### EndPoints
 
