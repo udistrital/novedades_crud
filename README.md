@@ -3,22 +3,23 @@ novedades_crud, API crud con modelo relacional en postgresSQL, el proyecto está
 
 el api provee la gestion de las diferentes novedades que puedan ser creadas en el sistemas
 
-***Instlaciones Previas:***
-* [Golang](https://github.com/udistrital/introduccion_oas/blob/master/instalacion_de_herramientas/golang.md)
-* [BeeGo](https://github.com/udistrital/introduccion_oas/blob/master/instalacion_de_herramientas/beego.md)
-
 
 ## Especificaciones Técnicas
 
-### Instalación
+### Tecnologías Implementadas y Versiones
+* [Golang](https://github.com/udistrital/introduccion_oas/blob/master/instalacion_de_herramientas/golang.md)
+* [BeeGo](https://github.com/udistrital/introduccion_oas/blob/master/instalacion_de_herramientas/beego.md)
 
-#### Opción 1
+### Instalación
 ```shell
+# Opción 1
 go get github.com/udistrital/novedades_crud
 ```
-#### Opción 2
+
 ```shell
-# Para clonar el proyecto en la carpeta local go/src/github.com/udistrital
+# Opción 2
+
+# clonar el proyecto en la carpeta local go/src/github.com/udistrital
 cd go/src/github.com/udistrital
 
 # clonar repo
@@ -31,7 +32,6 @@ cd novedades_crud
 go get
 ```
 
-
 ### Variables de Entorno
 ```bash
 NOVEDADES_CRUD__PGDB=[nombre de la base de datos]
@@ -42,32 +42,33 @@ NOVEDADES_CRUD__PGSCHEMA=[esquema donde se ubican las tablas]
 NOVEDADES_HTTP_PORT=[puerto de ejecucion] bee run
 ```
 
-### Ejecución del proyecto
-
-Ubicado en la raíz del proyecto, ejecutar:
+### Ejecución del Proyecto
 ```bash
+# Ubicado en la raíz del proyecto, ejecutar:
 NOVEDADES_CRUD__PGDB=XXX NOVEDADES_CRUD__PGPASS=XXX NOVEDADES_CRUD__PGURLS=XXX NOVEDADES_CRUD__PGUSER=XXX NOVEDADES_CRUD__PGSCHEMA=XXX NOVEDADES_HTTP_PORT=XXX bee run
 ```
-O si se quiere ejecutar el swager:
 ```shell
+# Ejecutar con la opción documental de swagger
 NOVEDADES_CRUD__PGDB=XXX NOVEDADES_CRUD__PGPASS=XXX NOVEDADES_CRUD__PGURLS=XXX NOVEDADES_CRUD__PGUSER=XXX NOVEDADES_CRUD__PGSCHEMA=XXX NOVEDADES_HTTP_PORT=XXX bee run -downdoc=true -gendoc=true
 ```
 
 ### Puertos
+El servidor se expone por defecto en el puerto 8080:
+```shell
+http://localhost:8080
+```
 
-El servidor se expone por defecto en el puerto: localhost:8080
-
-Para ver la documentación de swagger: [localhost:8080/swagger/](http://localhost:8080/swagger/)
-
+### EndPoints swagger
+Para ver la documentación de los servicios:
+```shell
+http://localhost:8080/swagger/
+```
 **Nota**: *En el swagger sale un error, hacer caso omiso.*
 
-### EndPoints
 
-Al ejecutar el swagger se puede tener mayor apreciacion de los diferentes metodos de peticion por cada endpoint cuales son los distinpos endpoint disponibles y como usarlos.
-
-### Modelo de datos de novedades_crud
+### Modelo de Datos
 El modelo de datos del API crud de novedades se muestra en la siguiente imágen:
-![novedades](https://user-images.githubusercontent.com/28914781/65917368-d0438500-e39c-11e9-8831-c13f4048309f.png)
+![novedades_crud_MD](https://user-images.githubusercontent.com/28914781/65917368-d0438500-e39c-11e9-8831-c13f4048309f.png)
 
 
 ## Licencia
