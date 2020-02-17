@@ -67,7 +67,7 @@ http://localhost:8080/swagger/
 
 
 ### Modelo de Datos
-El modelo de datos del API crud de novedades se muestra en la siguiente imágen:
+Modelo de datos API crud novedades
 ![novedades_crud_MD](https://user-images.githubusercontent.com/28914781/65917368-d0438500-e39c-11e9-8831-c13f4048309f.png)
 
 
