@@ -38,7 +38,7 @@ steps:
         - master    
   
   - name: go-awsecs
-    image: golang:1.9
+    image: golang:1.14
     environment:
       AWS_ACCESS_KEY_ID:
         from_secret: AWS_ACCESS_KEY_ID
