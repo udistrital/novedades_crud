@@ -5,17 +5,16 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"time"
 
 	"github.com/astaxie/beego/orm"
 )
 
 type Fechas struct {
-	Id                          int                        `orm:"column(id);pk"`
-	Fecha                       time.Time                  `orm:"column(fecha);type(timestamp without time zone)"`
+	Id                          int                        `orm:"column(id);pk;auto"`
+	Fecha                       string                     `orm:"column(fecha);type(timestamp without time zone)"`
 	Activo                      bool                       `orm:"column(activo)"`
-	FechaCreacion               time.Time                  `orm:"column(fecha_creacion);type(timestamp without time zone)"`
-	FechaModificacion           time.Time                  `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
+	FechaCreacion               string                     `orm:"column(fecha_creacion);type(timestamp without time zone)"`
+	FechaModificacion           string                     `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
 	IdTipoFecha                 *TipoFecha                 `orm:"column(id_tipo_fecha);rel(fk)"`
 	IdNovedadesPoscontractuales *NovedadesPoscontractuales `orm:"column(id_novedades_poscontractuales);rel(fk)"`
 }
@@ -52,7 +51,7 @@ func GetFechasById(id int) (v *Fechas, err error) {
 func GetAllFechas(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(Fechas))
+	qs := o.QueryTable(new(Fechas)).RelatedSel()
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

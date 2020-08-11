@@ -57,6 +57,11 @@ func init() {
 				&controllers.TipoNovedadController{},
 			),
 		),
+		beego.NSNamespace("/trNovedad",
+			beego.NSInclude(
+				&controllers.Tr_novedad_poscontractualController{},
+			),
+		),
 	)
 	beego.AddNamespace(ns)
 }
