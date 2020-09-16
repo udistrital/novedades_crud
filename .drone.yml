@@ -56,6 +56,7 @@ steps:
     branch:
     - develop
     - release/*
+    - feature/*
     - master
     event:
     - push
@@ -179,7 +180,7 @@ steps:
     repo: ${DRONE_REPO##udistrital/}
     tags:
       - ${DRONE_COMMIT:0:7}
-      - ${DRONE_BRANCH}
+      - latest
   when:
     branch:
     - feature/*
