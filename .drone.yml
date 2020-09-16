@@ -183,7 +183,8 @@ steps:
       - latest
   when:
     branch:
-    - feature/*
+    - release/*
+    - master
     event:
     - push
 
@@ -208,7 +209,7 @@ steps:
     esac
   - AWS_REGION=us-east-1
   - SERVICE=${DRONE_REPO##udistrital/}_$AMBIENTE
-  - MYCONTAINER=oas0/${DRONE_REPO##udistrital/}:${DRONE_COMMIT:0:7}
+  - MYCONTAINER=699001025740.dkr.ecr.us-east-1.amazonaws.com/${DRONE_REPO##udistrital/}:${DRONE_COMMIT:0:7}
   - container_name=${DRONE_REPO##udistrital/}
   - apt-get update
   - apt-get install unzip
