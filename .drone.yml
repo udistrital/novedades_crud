@@ -253,7 +253,6 @@ steps:
     - develop
     - release/*
     - master
-    - feature/*
     event:
     - push
     status:
