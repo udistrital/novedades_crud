@@ -32,8 +32,7 @@ paths:
         type: string
       - in: query
         name: order
-        description: Order corresponding to each sortby field, if single value, apply
-          to all sortby fields. e.g. desc,asc ...
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
         type: string
       - in: query
         name: limit
@@ -147,8 +146,7 @@ paths:
         type: string
       - in: query
         name: order
-        description: Order corresponding to each sortby field, if single value, apply
-          to all sortby fields. e.g. desc,asc ...
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
         type: string
       - in: query
         name: limit
@@ -262,8 +260,7 @@ paths:
         type: string
       - in: query
         name: order
-        description: Order corresponding to each sortby field, if single value, apply
-          to all sortby fields. e.g. desc,asc ...
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
         type: string
       - in: query
         name: limit
@@ -377,8 +374,7 @@ paths:
         type: string
       - in: query
         name: order
-        description: Order corresponding to each sortby field, if single value, apply
-          to all sortby fields. e.g. desc,asc ...
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
         type: string
       - in: query
         name: limit
@@ -492,8 +488,7 @@ paths:
         type: string
       - in: query
         name: order
-        description: Order corresponding to each sortby field, if single value, apply
-          to all sortby fields. e.g. desc,asc ...
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
         type: string
       - in: query
         name: limit
@@ -607,8 +602,7 @@ paths:
         type: string
       - in: query
         name: order
-        description: Order corresponding to each sortby field, if single value, apply
-          to all sortby fields. e.g. desc,asc ...
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
         type: string
       - in: query
         name: limit
@@ -722,8 +716,7 @@ paths:
         type: string
       - in: query
         name: order
-        description: Order corresponding to each sortby field, if single value, apply
-          to all sortby fields. e.g. desc,asc ...
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
         type: string
       - in: query
         name: limit
@@ -853,19 +846,19 @@ paths:
         "400":
           description: the request contains incorrect syntax
 definitions:
-  18186.<nil>.Fechas:
+  32096.<nil>.Fechas:
     title: Fechas
     type: object
-  18219.<nil>.Propiedad:
+  32129.<nil>.Propiedad:
     title: Propiedad
     type: object
-  18388.<nil>.Fechas:
+  32298.<nil>.Fechas:
     title: Fechas
     type: object
-  18421.<nil>.Propiedad:
+  32331.<nil>.Propiedad:
     title: Propiedad
     type: object
-  18457.<nil>.Poliza:
+  32367.<nil>.Poliza:
     title: Poliza
     type: object
   models.Fechas:
@@ -1040,23 +1033,23 @@ definitions:
     type: object
     properties:
       Fechas:
-        $ref: '#/definitions/18186.<nil>.Fechas'
+        $ref: '#/definitions/32096.<nil>.Fechas'
       NovedadPoscontractual:
         $ref: '#/definitions/models.NovedadesPoscontractuales'
       Propiedad:
-        $ref: '#/definitions/18219.<nil>.Propiedad'
+        $ref: '#/definitions/32129.<nil>.Propiedad'
   models.TrNovedadesPoscontractualesPoliza:
     title: TrNovedadesPoscontractualesPoliza
     type: object
     properties:
       Fechas:
-        $ref: '#/definitions/18388.<nil>.Fechas'
+        $ref: '#/definitions/32298.<nil>.Fechas'
       NovedadPoscontractual:
         $ref: '#/definitions/models.NovedadesPoscontractuales'
       Poliza:
-        $ref: '#/definitions/18457.<nil>.Poliza'
+        $ref: '#/definitions/32367.<nil>.Poliza'
       Propiedad:
-        $ref: '#/definitions/18421.<nil>.Propiedad'
+        $ref: '#/definitions/32331.<nil>.Propiedad'
 tags:
 - name: novedades_poscontractuales
   description: |
