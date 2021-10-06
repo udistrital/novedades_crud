@@ -1284,23 +1284,23 @@
         }
     },
     "definitions": {
-        "18186.\u003cnil\u003e.Fechas": {
+        "32096.\u003cnil\u003e.Fechas": {
             "title": "Fechas",
             "type": "object"
         },
-        "18219.\u003cnil\u003e.Propiedad": {
+        "32129.\u003cnil\u003e.Propiedad": {
             "title": "Propiedad",
             "type": "object"
         },
-        "18388.\u003cnil\u003e.Fechas": {
+        "32298.\u003cnil\u003e.Fechas": {
             "title": "Fechas",
             "type": "object"
         },
-        "18421.\u003cnil\u003e.Propiedad": {
+        "32331.\u003cnil\u003e.Propiedad": {
             "title": "Propiedad",
             "type": "object"
         },
-        "18457.\u003cnil\u003e.Poliza": {
+        "32367.\u003cnil\u003e.Poliza": {
             "title": "Poliza",
             "type": "object"
         },
@@ -1550,13 +1550,13 @@
             "type": "object",
             "properties": {
                 "Fechas": {
-                    "$ref": "#/definitions/18186.\u003cnil\u003e.Fechas"
+                    "$ref": "#/definitions/32096.\u003cnil\u003e.Fechas"
                 },
                 "NovedadPoscontractual": {
                     "$ref": "#/definitions/models.NovedadesPoscontractuales"
                 },
                 "Propiedad": {
-                    "$ref": "#/definitions/18219.\u003cnil\u003e.Propiedad"
+                    "$ref": "#/definitions/32129.\u003cnil\u003e.Propiedad"
                 }
             }
         },
@@ -1565,16 +1565,16 @@
             "type": "object",
             "properties": {
                 "Fechas": {
-                    "$ref": "#/definitions/18388.\u003cnil\u003e.Fechas"
+                    "$ref": "#/definitions/32298.\u003cnil\u003e.Fechas"
                 },
                 "NovedadPoscontractual": {
                     "$ref": "#/definitions/models.NovedadesPoscontractuales"
                 },
                 "Poliza": {
-                    "$ref": "#/definitions/18457.\u003cnil\u003e.Poliza"
+                    "$ref": "#/definitions/32367.\u003cnil\u003e.Poliza"
                 },
                 "Propiedad": {
-                    "$ref": "#/definitions/18421.\u003cnil\u003e.Propiedad"
+                    "$ref": "#/definitions/32331.\u003cnil\u003e.Propiedad"
                 }
             }
         }
