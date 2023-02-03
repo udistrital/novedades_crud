@@ -23,6 +23,7 @@ type NovedadesPoscontractuales struct {
 	FechaModificacion string `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
 	Activo            bool   `orm:"column(activo)"`
 	TipoNovedad       int    `orm:"column(tipo_novedad)"`
+	Estado            string `orm:"column(estado)"`
 }
 
 func (t *NovedadesPoscontractuales) TableName() string {
