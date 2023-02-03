@@ -175,26 +175,26 @@ func (c *Tr_novedad_poscontractualController) PostPoliza() {
 // 	c.ServeJSON()
 // }
 
-// // Put ...
-// // @Title Put
-// // @Description update the Tr_novedad_poscontractual
-// // @Param	id		path 	string	true		"The id you want to update"
-// // @Param	body		body 	models.Tr_novedad_poscontractual	true		"body for Tr_novedad_poscontractual content"
-// // @Success 200 {object} models.Tr_novedad_poscontractual
-// // @Failure 403 :id is not int
-// // @router /:id [put]
-// func (c *Tr_novedad_poscontractualController) Put() {
-// 	idStr := c.Ctx.Input.Param(":id")
-// 	id, _ := strconv.ParseInt(idStr, 0, 64)
-// 	v := models.Tr_novedad_poscontractual{Id: id}
-// 	json.Unmarshal(c.Ctx.Input.RequestBody, &v)
-// 	if err := models.UpdateTr_novedad_poscontractualById(&v); err == nil {
-// 		c.Data["json"] = "OK"
-// 	} else {
-// 		c.Data["json"] = err.Error()
-// 	}
-// 	c.ServeJSON()
-// }
+// Put ...
+// @Title Put
+// @Description update the Tr_novedad_poscontractual
+// @Param	id		path 	string	true		"The id you want to update"
+// @Param	body		body 	models.Tr_novedad_poscontractual	true		"body for Tr_novedad_poscontractual content"
+// @Success 200 {object} models.Tr_novedad_poscontractual
+// @Failure 403 :id is not int
+// @router /:id [put]
+func (c *Tr_novedad_poscontractualController) Put() {
+	// idStr := c.Ctx.Input.Param(":id")
+	// id, _ := strconv.ParseInt(idStr, 0, 64)
+	// v := models.Tr_novedad_poscontractual{Id: id}
+	// json.Unmarshal(c.Ctx.Input.RequestBody, &v)
+	// if err := models.UpdateTr_novedad_poscontractualById(&v); err == nil {
+	// 	c.Data["json"] = "OK"
+	// } else {
+	// 	c.Data["json"] = err.Error()
+	// }
+	// c.ServeJSON()
+}
 
 // // Delete ...
 // // @Title Delete
