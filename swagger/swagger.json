@@ -1281,26 +1281,64 @@
                     }
                 }
             }
+        },
+        "/trNovedad/{id}": {
+            "put": {
+                "tags": [
+                    "trNovedad"
+                ],
+                "description": "update the Tr_novedad_poscontractual",
+                "operationId": "Tr_novedad_poscontractualController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Tr_novedad_poscontractual content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Tr_novedad_poscontractual"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Tr_novedad_poscontractual"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            }
         }
     },
     "definitions": {
-        "32096.\u003cnil\u003e.Fechas": {
+        "33259.\u003cnil\u003e.Fechas": {
             "title": "Fechas",
             "type": "object"
         },
-        "32129.\u003cnil\u003e.Propiedad": {
+        "33293.\u003cnil\u003e.Propiedad": {
             "title": "Propiedad",
             "type": "object"
         },
-        "32298.\u003cnil\u003e.Fechas": {
+        "33467.\u003cnil\u003e.Fechas": {
             "title": "Fechas",
             "type": "object"
         },
-        "32331.\u003cnil\u003e.Propiedad": {
+        "33501.\u003cnil\u003e.Propiedad": {
             "title": "Propiedad",
             "type": "object"
         },
-        "32367.\u003cnil\u003e.Poliza": {
+        "33538.\u003cnil\u003e.Poliza": {
             "title": "Poliza",
             "type": "object"
         },
@@ -1345,6 +1383,9 @@
                 "ContratoId": {
                     "type": "integer",
                     "format": "int64"
+                },
+                "Estado": {
+                    "type": "string"
                 },
                 "FechaCreacion": {
                     "type": "string"
@@ -1550,13 +1591,13 @@
             "type": "object",
             "properties": {
                 "Fechas": {
-                    "$ref": "#/definitions/32096.\u003cnil\u003e.Fechas"
+                    "$ref": "#/definitions/33259.\u003cnil\u003e.Fechas"
                 },
                 "NovedadPoscontractual": {
                     "$ref": "#/definitions/models.NovedadesPoscontractuales"
                 },
                 "Propiedad": {
-                    "$ref": "#/definitions/32129.\u003cnil\u003e.Propiedad"
+                    "$ref": "#/definitions/33293.\u003cnil\u003e.Propiedad"
                 }
             }
         },
@@ -1565,18 +1606,22 @@
             "type": "object",
             "properties": {
                 "Fechas": {
-                    "$ref": "#/definitions/32298.\u003cnil\u003e.Fechas"
+                    "$ref": "#/definitions/33467.\u003cnil\u003e.Fechas"
                 },
                 "NovedadPoscontractual": {
                     "$ref": "#/definitions/models.NovedadesPoscontractuales"
                 },
                 "Poliza": {
-                    "$ref": "#/definitions/32367.\u003cnil\u003e.Poliza"
+                    "$ref": "#/definitions/33538.\u003cnil\u003e.Poliza"
                 },
                 "Propiedad": {
-                    "$ref": "#/definitions/32331.\u003cnil\u003e.Propiedad"
+                    "$ref": "#/definitions/33501.\u003cnil\u003e.Propiedad"
                 }
             }
+        },
+        "models.Tr_novedad_poscontractual": {
+            "title": "Tr_novedad_poscontractual",
+            "type": "object"
         }
     },
     "tags": [

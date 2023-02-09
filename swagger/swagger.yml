@@ -827,6 +827,31 @@ paths:
           description: '{int} models.TrNovedadesPoscontractuales'
         "403":
           description: body is empty
+  /trNovedad/{id}:
+    put:
+      tags:
+      - trNovedad
+      description: update the Tr_novedad_poscontractual
+      operationId: Tr_novedad_poscontractualController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Tr_novedad_poscontractual content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Tr_novedad_poscontractual'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Tr_novedad_poscontractual'
+        "403":
+          description: :id is not int
   /trNovedad/trnovedadpoliza/:
     post:
       tags:
@@ -846,19 +871,19 @@ paths:
         "400":
           description: the request contains incorrect syntax
 definitions:
-  32096.<nil>.Fechas:
+  33259.<nil>.Fechas:
     title: Fechas
     type: object
-  32129.<nil>.Propiedad:
+  33293.<nil>.Propiedad:
     title: Propiedad
     type: object
-  32298.<nil>.Fechas:
+  33467.<nil>.Fechas:
     title: Fechas
     type: object
-  32331.<nil>.Propiedad:
+  33501.<nil>.Propiedad:
     title: Propiedad
     type: object
-  32367.<nil>.Poliza:
+  33538.<nil>.Poliza:
     title: Poliza
     type: object
   models.Fechas:
@@ -891,6 +916,8 @@ definitions:
       ContratoId:
         type: integer
         format: int64
+      Estado:
+        type: string
       FechaCreacion:
         type: string
       FechaModificacion:
@@ -1028,28 +1055,31 @@ definitions:
       TipoNovedad:
         type: integer
         format: int32
+  models.Tr_novedad_poscontractual:
+    title: Tr_novedad_poscontractual
+    type: object
   models.TrNovedadesPoscontractuales:
     title: TrNovedadesPoscontractuales
     type: object
     properties:
       Fechas:
-        $ref: '#/definitions/32096.<nil>.Fechas'
+        $ref: '#/definitions/33259.<nil>.Fechas'
       NovedadPoscontractual:
         $ref: '#/definitions/models.NovedadesPoscontractuales'
       Propiedad:
-        $ref: '#/definitions/32129.<nil>.Propiedad'
+        $ref: '#/definitions/33293.<nil>.Propiedad'
   models.TrNovedadesPoscontractualesPoliza:
     title: TrNovedadesPoscontractualesPoliza
     type: object
     properties:
       Fechas:
-        $ref: '#/definitions/32298.<nil>.Fechas'
+        $ref: '#/definitions/33467.<nil>.Fechas'
       NovedadPoscontractual:
         $ref: '#/definitions/models.NovedadesPoscontractuales'
       Poliza:
-        $ref: '#/definitions/32367.<nil>.Poliza'
+        $ref: '#/definitions/33538.<nil>.Poliza'
       Propiedad:
-        $ref: '#/definitions/32331.<nil>.Propiedad'
+        $ref: '#/definitions/33501.<nil>.Propiedad'
 tags:
 - name: novedades_poscontractuales
   description: |
