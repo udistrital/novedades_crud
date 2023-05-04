@@ -1,0 +1,1 @@
+ALTER TABLE novedades.novedades_poscontractuales ADD COLUMN idDocumento INT;
