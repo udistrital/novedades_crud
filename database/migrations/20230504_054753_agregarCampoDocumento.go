@@ -9,22 +9,22 @@ import (
 )
 
 // DO NOT MODIFY
-type AgregarCampoTabla_20230124_112600 struct {
+type AgregarCampoDocumento_20230504_054753 struct {
 	migration.Migration
 }
 
 // DO NOT MODIFY
 func init() {
-	m := &AgregarCampoTabla_20230124_112600{}
-	m.Created = "20230124_112600"
+	m := &AgregarCampoDocumento_20230504_054753{}
+	m.Created = "20230504_054753"
 
-	migration.Register("AgregarCampoTabla_20230124_112600", m)
+	migration.Register("AgregarCampoDocumento_20230504_054753", m)
 }
 
 // Run the migrations
-func (m *AgregarCampoTabla_20230124_112600) Up() {
+func (m *AgregarCampoDocumento_20230504_054753) Up() {
 	// use m.SQL("CREATE TABLE ...") to make schema update
-	file, err := ioutil.ReadFile("../scripts/20230124_112600_agregar_campo_up.sql")
+	file, err := ioutil.ReadFile("../scripts/20230504_054753_agregar_campo_documento_up.sql")
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -36,9 +36,9 @@ func (m *AgregarCampoTabla_20230124_112600) Up() {
 }
 
 // Reverse the migrations
-func (m *AgregarCampoTabla_20230124_112600) Down() {
+func (m *AgregarCampoDocumento_20230504_054753) Down() {
 	// use m.SQL("DROP TABLE ...") to reverse schema update
-	file, err := ioutil.ReadFile("../scripts/20230124_112600_agregar_campo_down.sql")
+	file, err := ioutil.ReadFile("../scripts/20230504_054753_agregar_campo_documento_down.sql")
 
 	if err != nil {
 		fmt.Println(err)

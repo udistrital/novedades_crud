@@ -24,6 +24,7 @@ type NovedadesPoscontractuales struct {
 	Activo            bool   `orm:"column(activo)"`
 	TipoNovedad       int    `orm:"column(tipo_novedad)"`
 	Estado            string `orm:"column(estado)"`
+	EnlaceDocumento   string `orm:"column(enlace_documento)"`
 }
 
 func (t *NovedadesPoscontractuales) TableName() string {
