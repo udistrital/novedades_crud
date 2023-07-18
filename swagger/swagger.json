@@ -2,7 +2,7 @@
     "swagger": "2.0",
     "info": {
         "title": "beego Test API",
-        "description": "beego has a very cool tools to autogenerate documents for your API",
+        "description": "beego has a very cool tools to autogenerate documents for your API\n",
         "version": "1.0.0",
         "termsOfService": "http://beego.me/",
         "contact": {
@@ -20,7 +20,7 @@
                 "tags": [
                     "fechas"
                 ],
-                "description": "get Fechas",
+                "description": "get Fechas\n\u003cbr\u003e",
                 "operationId": "FechasController.Get All",
                 "parameters": [
                     {
@@ -76,7 +76,7 @@
                 "tags": [
                     "fechas"
                 ],
-                "description": "create Fechas",
+                "description": "create Fechas\n\u003cbr\u003e",
                 "operationId": "FechasController.Post",
                 "parameters": [
                     {
@@ -104,7 +104,7 @@
                 "tags": [
                     "fechas"
                 ],
-                "description": "get Fechas by id",
+                "description": "get Fechas by id\n\u003cbr\u003e",
                 "operationId": "FechasController.Get One",
                 "parameters": [
                     {
@@ -131,7 +131,7 @@
                 "tags": [
                     "fechas"
                 ],
-                "description": "update the Fechas",
+                "description": "update the Fechas\n\u003cbr\u003e",
                 "operationId": "FechasController.Put",
                 "parameters": [
                     {
@@ -167,7 +167,7 @@
                 "tags": [
                     "fechas"
                 ],
-                "description": "delete the Fechas",
+                "description": "delete the Fechas\n\u003cbr\u003e",
                 "operationId": "FechasController.Delete",
                 "parameters": [
                     {
@@ -193,7 +193,7 @@
                 "tags": [
                     "novedades_poscontractuales"
                 ],
-                "description": "get NovedadesPoscontractuales",
+                "description": "get NovedadesPoscontractuales\n\u003cbr\u003e",
                 "operationId": "NovedadesPoscontractualesController.Get All",
                 "parameters": [
                     {
@@ -249,7 +249,7 @@
                 "tags": [
                     "novedades_poscontractuales"
                 ],
-                "description": "create NovedadesPoscontractuales",
+                "description": "create NovedadesPoscontractuales\n\u003cbr\u003e",
                 "operationId": "NovedadesPoscontractualesController.Post",
                 "parameters": [
                     {
@@ -277,7 +277,7 @@
                 "tags": [
                     "novedades_poscontractuales"
                 ],
-                "description": "get NovedadesPoscontractuales by id",
+                "description": "get NovedadesPoscontractuales by id\n\u003cbr\u003e",
                 "operationId": "NovedadesPoscontractualesController.Get One",
                 "parameters": [
                     {
@@ -304,7 +304,7 @@
                 "tags": [
                     "novedades_poscontractuales"
                 ],
-                "description": "update the NovedadesPoscontractuales",
+                "description": "update the NovedadesPoscontractuales\n\u003cbr\u003e",
                 "operationId": "NovedadesPoscontractualesController.Put",
                 "parameters": [
                     {
@@ -340,7 +340,7 @@
                 "tags": [
                     "novedades_poscontractuales"
                 ],
-                "description": "delete the NovedadesPoscontractuales",
+                "description": "delete the NovedadesPoscontractuales\n\u003cbr\u003e",
                 "operationId": "NovedadesPoscontractualesController.Delete",
                 "parameters": [
                     {
@@ -366,7 +366,7 @@
                 "tags": [
                     "poliza"
                 ],
-                "description": "get Poliza",
+                "description": "get Poliza\n\u003cbr\u003e",
                 "operationId": "PolizaController.Get All",
                 "parameters": [
                     {
@@ -422,7 +422,7 @@
                 "tags": [
                     "poliza"
                 ],
-                "description": "create Poliza",
+                "description": "create Poliza\n\u003cbr\u003e",
                 "operationId": "PolizaController.Post",
                 "parameters": [
                     {
@@ -450,7 +450,7 @@
                 "tags": [
                     "poliza"
                 ],
-                "description": "get Poliza by id",
+                "description": "get Poliza by id\n\u003cbr\u003e",
                 "operationId": "PolizaController.Get One",
                 "parameters": [
                     {
@@ -477,7 +477,7 @@
                 "tags": [
                     "poliza"
                 ],
-                "description": "update the Poliza",
+                "description": "update the Poliza\n\u003cbr\u003e",
                 "operationId": "PolizaController.Put",
                 "parameters": [
                     {
@@ -513,7 +513,7 @@
                 "tags": [
                     "poliza"
                 ],
-                "description": "delete the Poliza",
+                "description": "delete the Poliza\n\u003cbr\u003e",
                 "operationId": "PolizaController.Delete",
                 "parameters": [
                     {
@@ -539,7 +539,7 @@
                 "tags": [
                     "propiedad"
                 ],
-                "description": "get Propiedad",
+                "description": "get Propiedad\n\u003cbr\u003e",
                 "operationId": "PropiedadController.Get All",
                 "parameters": [
                     {
@@ -595,7 +595,7 @@
                 "tags": [
                     "propiedad"
                 ],
-                "description": "create Propiedad",
+                "description": "create Propiedad\n\u003cbr\u003e",
                 "operationId": "PropiedadController.Post",
                 "parameters": [
                     {
@@ -623,7 +623,7 @@
                 "tags": [
                     "propiedad"
                 ],
-                "description": "get Propiedad by id",
+                "description": "get Propiedad by id\n\u003cbr\u003e",
                 "operationId": "PropiedadController.Get One",
                 "parameters": [
                     {
@@ -650,7 +650,7 @@
                 "tags": [
                     "propiedad"
                 ],
-                "description": "update the Propiedad",
+                "description": "update the Propiedad\n\u003cbr\u003e",
                 "operationId": "PropiedadController.Put",
                 "parameters": [
                     {
@@ -686,7 +686,7 @@
                 "tags": [
                     "propiedad"
                 ],
-                "description": "delete the Propiedad",
+                "description": "delete the Propiedad\n\u003cbr\u003e",
                 "operationId": "PropiedadController.Delete",
                 "parameters": [
                     {
@@ -712,7 +712,7 @@
                 "tags": [
                     "tipo_fecha"
                 ],
-                "description": "get TipoFecha",
+                "description": "get TipoFecha\n\u003cbr\u003e",
                 "operationId": "TipoFechaController.Get All",
                 "parameters": [
                     {
@@ -768,7 +768,7 @@
                 "tags": [
                     "tipo_fecha"
                 ],
-                "description": "create TipoFecha",
+                "description": "create TipoFecha\n\u003cbr\u003e",
                 "operationId": "TipoFechaController.Post",
                 "parameters": [
                     {
@@ -796,7 +796,7 @@
                 "tags": [
                     "tipo_fecha"
                 ],
-                "description": "get TipoFecha by id",
+                "description": "get TipoFecha by id\n\u003cbr\u003e",
                 "operationId": "TipoFechaController.Get One",
                 "parameters": [
                     {
@@ -823,7 +823,7 @@
                 "tags": [
                     "tipo_fecha"
                 ],
-                "description": "update the TipoFecha",
+                "description": "update the TipoFecha\n\u003cbr\u003e",
                 "operationId": "TipoFechaController.Put",
                 "parameters": [
                     {
@@ -859,7 +859,7 @@
                 "tags": [
                     "tipo_fecha"
                 ],
-                "description": "delete the TipoFecha",
+                "description": "delete the TipoFecha\n\u003cbr\u003e",
                 "operationId": "TipoFechaController.Delete",
                 "parameters": [
                     {
@@ -885,7 +885,7 @@
                 "tags": [
                     "tipo_novedad"
                 ],
-                "description": "get TipoNovedad",
+                "description": "get TipoNovedad\n\u003cbr\u003e",
                 "operationId": "TipoNovedadController.Get All",
                 "parameters": [
                     {
@@ -941,7 +941,7 @@
                 "tags": [
                     "tipo_novedad"
                 ],
-                "description": "create TipoNovedad",
+                "description": "create TipoNovedad\n\u003cbr\u003e",
                 "operationId": "TipoNovedadController.Post",
                 "parameters": [
                     {
@@ -969,7 +969,7 @@
                 "tags": [
                     "tipo_novedad"
                 ],
-                "description": "get TipoNovedad by id",
+                "description": "get TipoNovedad by id\n\u003cbr\u003e",
                 "operationId": "TipoNovedadController.Get One",
                 "parameters": [
                     {
@@ -996,7 +996,7 @@
                 "tags": [
                     "tipo_novedad"
                 ],
-                "description": "update the TipoNovedad",
+                "description": "update the TipoNovedad\n\u003cbr\u003e",
                 "operationId": "TipoNovedadController.Put",
                 "parameters": [
                     {
@@ -1032,7 +1032,7 @@
                 "tags": [
                     "tipo_novedad"
                 ],
-                "description": "delete the TipoNovedad",
+                "description": "delete the TipoNovedad\n\u003cbr\u003e",
                 "operationId": "TipoNovedadController.Delete",
                 "parameters": [
                     {
@@ -1058,7 +1058,7 @@
                 "tags": [
                     "tipo_propiedad"
                 ],
-                "description": "get TipoPropiedad",
+                "description": "get TipoPropiedad\n\u003cbr\u003e",
                 "operationId": "TipoPropiedadController.Get All",
                 "parameters": [
                     {
@@ -1114,7 +1114,7 @@
                 "tags": [
                     "tipo_propiedad"
                 ],
-                "description": "create TipoPropiedad",
+                "description": "create TipoPropiedad\n\u003cbr\u003e",
                 "operationId": "TipoPropiedadController.Post",
                 "parameters": [
                     {
@@ -1142,7 +1142,7 @@
                 "tags": [
                     "tipo_propiedad"
                 ],
-                "description": "get TipoPropiedad by id",
+                "description": "get TipoPropiedad by id\n\u003cbr\u003e",
                 "operationId": "TipoPropiedadController.Get One",
                 "parameters": [
                     {
@@ -1169,7 +1169,7 @@
                 "tags": [
                     "tipo_propiedad"
                 ],
-                "description": "update the TipoPropiedad",
+                "description": "update the TipoPropiedad\n\u003cbr\u003e",
                 "operationId": "TipoPropiedadController.Put",
                 "parameters": [
                     {
@@ -1205,7 +1205,7 @@
                 "tags": [
                     "tipo_propiedad"
                 ],
-                "description": "delete the TipoPropiedad",
+                "description": "delete the TipoPropiedad\n\u003cbr\u003e",
                 "operationId": "TipoPropiedadController.Delete",
                 "parameters": [
                     {
@@ -1231,7 +1231,7 @@
                 "tags": [
                     "trNovedad"
                 ],
-                "description": "create Tr_novedad_poscontractual",
+                "description": "create Tr_novedad_poscontractual\n\u003cbr\u003e",
                 "operationId": "Tr_novedad_poscontractualController.Post",
                 "parameters": [
                     {
@@ -1259,7 +1259,7 @@
                 "tags": [
                     "trNovedad"
                 ],
-                "description": "Transacción para crear novedad con poliza",
+                "description": "Transacción para crear novedad con poliza\n\u003cbr\u003e",
                 "operationId": "Tr_novedad_poscontractualController.Post",
                 "parameters": [
                     {
@@ -1287,7 +1287,7 @@
                 "tags": [
                     "trNovedad"
                 ],
-                "description": "update the Tr_novedad_poscontractual",
+                "description": "update the Tr_novedad_poscontractual\n\u003cbr\u003e",
                 "operationId": "Tr_novedad_poscontractualController.Put",
                 "parameters": [
                     {
@@ -1322,24 +1322,32 @@
         }
     },
     "definitions": {
-        "33259.\u003cnil\u003e.Fechas": {
+        "33319.\u003cnil\u003e.Fechas": {
             "title": "Fechas",
             "type": "object"
         },
-        "33293.\u003cnil\u003e.Propiedad": {
+        "33353.\u003cnil\u003e.Propiedad": {
             "title": "Propiedad",
             "type": "object"
         },
-        "33467.\u003cnil\u003e.Fechas": {
+        "33390.\u003cnil\u003e.AprobacionFirma": {
+            "title": "AprobacionFirma",
+            "type": "object"
+        },
+        "33536.\u003cnil\u003e.Fechas": {
             "title": "Fechas",
             "type": "object"
         },
-        "33501.\u003cnil\u003e.Propiedad": {
+        "33570.\u003cnil\u003e.Propiedad": {
             "title": "Propiedad",
             "type": "object"
         },
-        "33538.\u003cnil\u003e.Poliza": {
+        "33607.\u003cnil\u003e.Poliza": {
             "title": "Poliza",
+            "type": "object"
+        },
+        "33641.\u003cnil\u003e.AprobacionFirma": {
+            "title": "AprobacionFirma",
             "type": "object"
         },
         "models.Fechas": {
@@ -1383,6 +1391,9 @@
                 "ContratoId": {
                     "type": "integer",
                     "format": "int64"
+                },
+                "EnlaceDocumento": {
+                    "type": "string"
                 },
                 "Estado": {
                     "type": "string"
@@ -1590,14 +1601,17 @@
             "title": "TrNovedadesPoscontractuales",
             "type": "object",
             "properties": {
+                "AprobacionFirma": {
+                    "$ref": "#/definitions/33390.\u003cnil\u003e.AprobacionFirma"
+                },
                 "Fechas": {
-                    "$ref": "#/definitions/33259.\u003cnil\u003e.Fechas"
+                    "$ref": "#/definitions/33319.\u003cnil\u003e.Fechas"
                 },
                 "NovedadPoscontractual": {
                     "$ref": "#/definitions/models.NovedadesPoscontractuales"
                 },
                 "Propiedad": {
-                    "$ref": "#/definitions/33293.\u003cnil\u003e.Propiedad"
+                    "$ref": "#/definitions/33353.\u003cnil\u003e.Propiedad"
                 }
             }
         },
@@ -1605,17 +1619,20 @@
             "title": "TrNovedadesPoscontractualesPoliza",
             "type": "object",
             "properties": {
+                "AprobacionFirma": {
+                    "$ref": "#/definitions/33641.\u003cnil\u003e.AprobacionFirma"
+                },
                 "Fechas": {
-                    "$ref": "#/definitions/33467.\u003cnil\u003e.Fechas"
+                    "$ref": "#/definitions/33536.\u003cnil\u003e.Fechas"
                 },
                 "NovedadPoscontractual": {
                     "$ref": "#/definitions/models.NovedadesPoscontractuales"
                 },
                 "Poliza": {
-                    "$ref": "#/definitions/33538.\u003cnil\u003e.Poliza"
+                    "$ref": "#/definitions/33607.\u003cnil\u003e.Poliza"
                 },
                 "Propiedad": {
-                    "$ref": "#/definitions/33501.\u003cnil\u003e.Propiedad"
+                    "$ref": "#/definitions/33570.\u003cnil\u003e.Propiedad"
                 }
             }
         },
@@ -1655,7 +1672,7 @@
         },
         {
             "name": "trNovedad",
-            "description": " Tr_novedad_poscontractualController operations for Tr_novedad_poscontractual\n"
+            "description": "Tr_novedad_poscontractualController operations for Tr_novedad_poscontractual\n"
         }
     ]
 }

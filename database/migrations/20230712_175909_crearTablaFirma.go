@@ -5,26 +5,26 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/astaxie/beego/migration"
+	"github.com/beego/beego/v2/client/orm/migration"
 )
 
 // DO NOT MODIFY
-type AgregarCampoDocumento_20230504_054753 struct {
+type CrearTablaFirma_20230712_175909 struct {
 	migration.Migration
 }
 
 // DO NOT MODIFY
 func init() {
-	m := &AgregarCampoDocumento_20230504_054753{}
-	m.Created = "20230504_054753"
+	m := &CrearTablaFirma_20230712_175909{}
+	m.Created = "20230712_175909"
 
-	migration.Register("AgregarCampoDocumento_20230504_054753", m)
+	migration.Register("CrearTablaFirma_20230712_175909", m)
 }
 
 // Run the migrations
-func (m *AgregarCampoDocumento_20230504_054753) Up() {
+func (m *CrearTablaFirma_20230712_175909) Up() {
 	// use m.SQL("CREATE TABLE ...") to make schema update
-	file, err := ioutil.ReadFile("../scripts/20230504_054753_agregar_campo_documento_up.sql")
+	file, err := ioutil.ReadFile("../scripts/20230707_104407_crear_tabla_firma_up.sql")
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -36,9 +36,9 @@ func (m *AgregarCampoDocumento_20230504_054753) Up() {
 }
 
 // Reverse the migrations
-func (m *AgregarCampoDocumento_20230504_054753) Down() {
+func (m *CrearTablaFirma_20230712_175909) Down() {
 	// use m.SQL("DROP TABLE ...") to reverse schema update
-	file, err := ioutil.ReadFile("../scripts/20230504_054753_agregar_campo_documento_down.sql")
+	file, err := ioutil.ReadFile("../scripts/20230707_104407_crear_tabla_firma_down.sql")
 
 	if err != nil {
 		fmt.Println(err)

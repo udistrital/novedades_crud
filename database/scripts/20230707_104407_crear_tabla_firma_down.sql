@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS novedades.novedades_poscontractuales;

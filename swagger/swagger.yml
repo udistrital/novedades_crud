@@ -1,7 +1,8 @@
 swagger: "2.0"
 info:
   title: beego Test API
-  description: beego has a very cool tools to autogenerate documents for your API
+  description: |
+    beego has a very cool tools to autogenerate documents for your API
   version: 1.0.0
   termsOfService: http://beego.me/
   contact:
@@ -15,7 +16,9 @@ paths:
     get:
       tags:
       - fechas
-      description: get Fechas
+      description: |-
+        get Fechas
+        <br>
       operationId: FechasController.Get All
       parameters:
       - in: query
@@ -32,7 +35,8 @@ paths:
         type: string
       - in: query
         name: order
-        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
         type: string
       - in: query
         name: limit
@@ -52,7 +56,9 @@ paths:
     post:
       tags:
       - fechas
-      description: create Fechas
+      description: |-
+        create Fechas
+        <br>
       operationId: FechasController.Post
       parameters:
       - in: body
@@ -70,7 +76,9 @@ paths:
     get:
       tags:
       - fechas
-      description: get Fechas by id
+      description: |-
+        get Fechas by id
+        <br>
       operationId: FechasController.Get One
       parameters:
       - in: path
@@ -88,7 +96,9 @@ paths:
     put:
       tags:
       - fechas
-      description: update the Fechas
+      description: |-
+        update the Fechas
+        <br>
       operationId: FechasController.Put
       parameters:
       - in: path
@@ -112,7 +122,9 @@ paths:
     delete:
       tags:
       - fechas
-      description: delete the Fechas
+      description: |-
+        delete the Fechas
+        <br>
       operationId: FechasController.Delete
       parameters:
       - in: path
@@ -129,7 +141,9 @@ paths:
     get:
       tags:
       - novedades_poscontractuales
-      description: get NovedadesPoscontractuales
+      description: |-
+        get NovedadesPoscontractuales
+        <br>
       operationId: NovedadesPoscontractualesController.Get All
       parameters:
       - in: query
@@ -146,7 +160,8 @@ paths:
         type: string
       - in: query
         name: order
-        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
         type: string
       - in: query
         name: limit
@@ -166,7 +181,9 @@ paths:
     post:
       tags:
       - novedades_poscontractuales
-      description: create NovedadesPoscontractuales
+      description: |-
+        create NovedadesPoscontractuales
+        <br>
       operationId: NovedadesPoscontractualesController.Post
       parameters:
       - in: body
@@ -184,7 +201,9 @@ paths:
     get:
       tags:
       - novedades_poscontractuales
-      description: get NovedadesPoscontractuales by id
+      description: |-
+        get NovedadesPoscontractuales by id
+        <br>
       operationId: NovedadesPoscontractualesController.Get One
       parameters:
       - in: path
@@ -202,7 +221,9 @@ paths:
     put:
       tags:
       - novedades_poscontractuales
-      description: update the NovedadesPoscontractuales
+      description: |-
+        update the NovedadesPoscontractuales
+        <br>
       operationId: NovedadesPoscontractualesController.Put
       parameters:
       - in: path
@@ -226,7 +247,9 @@ paths:
     delete:
       tags:
       - novedades_poscontractuales
-      description: delete the NovedadesPoscontractuales
+      description: |-
+        delete the NovedadesPoscontractuales
+        <br>
       operationId: NovedadesPoscontractualesController.Delete
       parameters:
       - in: path
@@ -243,7 +266,9 @@ paths:
     get:
       tags:
       - poliza
-      description: get Poliza
+      description: |-
+        get Poliza
+        <br>
       operationId: PolizaController.Get All
       parameters:
       - in: query
@@ -260,7 +285,8 @@ paths:
         type: string
       - in: query
         name: order
-        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
         type: string
       - in: query
         name: limit
@@ -280,7 +306,9 @@ paths:
     post:
       tags:
       - poliza
-      description: create Poliza
+      description: |-
+        create Poliza
+        <br>
       operationId: PolizaController.Post
       parameters:
       - in: body
@@ -298,7 +326,9 @@ paths:
     get:
       tags:
       - poliza
-      description: get Poliza by id
+      description: |-
+        get Poliza by id
+        <br>
       operationId: PolizaController.Get One
       parameters:
       - in: path
@@ -316,7 +346,9 @@ paths:
     put:
       tags:
       - poliza
-      description: update the Poliza
+      description: |-
+        update the Poliza
+        <br>
       operationId: PolizaController.Put
       parameters:
       - in: path
@@ -340,7 +372,9 @@ paths:
     delete:
       tags:
       - poliza
-      description: delete the Poliza
+      description: |-
+        delete the Poliza
+        <br>
       operationId: PolizaController.Delete
       parameters:
       - in: path
@@ -357,7 +391,9 @@ paths:
     get:
       tags:
       - propiedad
-      description: get Propiedad
+      description: |-
+        get Propiedad
+        <br>
       operationId: PropiedadController.Get All
       parameters:
       - in: query
@@ -374,7 +410,8 @@ paths:
         type: string
       - in: query
         name: order
-        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
         type: string
       - in: query
         name: limit
@@ -394,7 +431,9 @@ paths:
     post:
       tags:
       - propiedad
-      description: create Propiedad
+      description: |-
+        create Propiedad
+        <br>
       operationId: PropiedadController.Post
       parameters:
       - in: body
@@ -412,7 +451,9 @@ paths:
     get:
       tags:
       - propiedad
-      description: get Propiedad by id
+      description: |-
+        get Propiedad by id
+        <br>
       operationId: PropiedadController.Get One
       parameters:
       - in: path
@@ -430,7 +471,9 @@ paths:
     put:
       tags:
       - propiedad
-      description: update the Propiedad
+      description: |-
+        update the Propiedad
+        <br>
       operationId: PropiedadController.Put
       parameters:
       - in: path
@@ -454,7 +497,9 @@ paths:
     delete:
       tags:
       - propiedad
-      description: delete the Propiedad
+      description: |-
+        delete the Propiedad
+        <br>
       operationId: PropiedadController.Delete
       parameters:
       - in: path
@@ -471,7 +516,9 @@ paths:
     get:
       tags:
       - tipo_fecha
-      description: get TipoFecha
+      description: |-
+        get TipoFecha
+        <br>
       operationId: TipoFechaController.Get All
       parameters:
       - in: query
@@ -488,7 +535,8 @@ paths:
         type: string
       - in: query
         name: order
-        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
         type: string
       - in: query
         name: limit
@@ -508,7 +556,9 @@ paths:
     post:
       tags:
       - tipo_fecha
-      description: create TipoFecha
+      description: |-
+        create TipoFecha
+        <br>
       operationId: TipoFechaController.Post
       parameters:
       - in: body
@@ -526,7 +576,9 @@ paths:
     get:
       tags:
       - tipo_fecha
-      description: get TipoFecha by id
+      description: |-
+        get TipoFecha by id
+        <br>
       operationId: TipoFechaController.Get One
       parameters:
       - in: path
@@ -544,7 +596,9 @@ paths:
     put:
       tags:
       - tipo_fecha
-      description: update the TipoFecha
+      description: |-
+        update the TipoFecha
+        <br>
       operationId: TipoFechaController.Put
       parameters:
       - in: path
@@ -568,7 +622,9 @@ paths:
     delete:
       tags:
       - tipo_fecha
-      description: delete the TipoFecha
+      description: |-
+        delete the TipoFecha
+        <br>
       operationId: TipoFechaController.Delete
       parameters:
       - in: path
@@ -585,7 +641,9 @@ paths:
     get:
       tags:
       - tipo_novedad
-      description: get TipoNovedad
+      description: |-
+        get TipoNovedad
+        <br>
       operationId: TipoNovedadController.Get All
       parameters:
       - in: query
@@ -602,7 +660,8 @@ paths:
         type: string
       - in: query
         name: order
-        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
         type: string
       - in: query
         name: limit
@@ -622,7 +681,9 @@ paths:
     post:
       tags:
       - tipo_novedad
-      description: create TipoNovedad
+      description: |-
+        create TipoNovedad
+        <br>
       operationId: TipoNovedadController.Post
       parameters:
       - in: body
@@ -640,7 +701,9 @@ paths:
     get:
       tags:
       - tipo_novedad
-      description: get TipoNovedad by id
+      description: |-
+        get TipoNovedad by id
+        <br>
       operationId: TipoNovedadController.Get One
       parameters:
       - in: path
@@ -658,7 +721,9 @@ paths:
     put:
       tags:
       - tipo_novedad
-      description: update the TipoNovedad
+      description: |-
+        update the TipoNovedad
+        <br>
       operationId: TipoNovedadController.Put
       parameters:
       - in: path
@@ -682,7 +747,9 @@ paths:
     delete:
       tags:
       - tipo_novedad
-      description: delete the TipoNovedad
+      description: |-
+        delete the TipoNovedad
+        <br>
       operationId: TipoNovedadController.Delete
       parameters:
       - in: path
@@ -699,7 +766,9 @@ paths:
     get:
       tags:
       - tipo_propiedad
-      description: get TipoPropiedad
+      description: |-
+        get TipoPropiedad
+        <br>
       operationId: TipoPropiedadController.Get All
       parameters:
       - in: query
@@ -716,7 +785,8 @@ paths:
         type: string
       - in: query
         name: order
-        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
         type: string
       - in: query
         name: limit
@@ -736,7 +806,9 @@ paths:
     post:
       tags:
       - tipo_propiedad
-      description: create TipoPropiedad
+      description: |-
+        create TipoPropiedad
+        <br>
       operationId: TipoPropiedadController.Post
       parameters:
       - in: body
@@ -754,7 +826,9 @@ paths:
     get:
       tags:
       - tipo_propiedad
-      description: get TipoPropiedad by id
+      description: |-
+        get TipoPropiedad by id
+        <br>
       operationId: TipoPropiedadController.Get One
       parameters:
       - in: path
@@ -772,7 +846,9 @@ paths:
     put:
       tags:
       - tipo_propiedad
-      description: update the TipoPropiedad
+      description: |-
+        update the TipoPropiedad
+        <br>
       operationId: TipoPropiedadController.Put
       parameters:
       - in: path
@@ -796,7 +872,9 @@ paths:
     delete:
       tags:
       - tipo_propiedad
-      description: delete the TipoPropiedad
+      description: |-
+        delete the TipoPropiedad
+        <br>
       operationId: TipoPropiedadController.Delete
       parameters:
       - in: path
@@ -813,7 +891,9 @@ paths:
     post:
       tags:
       - trNovedad
-      description: create Tr_novedad_poscontractual
+      description: |-
+        create Tr_novedad_poscontractual
+        <br>
       operationId: Tr_novedad_poscontractualController.Post
       parameters:
       - in: body
@@ -831,7 +911,9 @@ paths:
     put:
       tags:
       - trNovedad
-      description: update the Tr_novedad_poscontractual
+      description: |-
+        update the Tr_novedad_poscontractual
+        <br>
       operationId: Tr_novedad_poscontractualController.Put
       parameters:
       - in: path
@@ -856,7 +938,9 @@ paths:
     post:
       tags:
       - trNovedad
-      description: Transacción para crear novedad con poliza
+      description: |-
+        Transacción para crear novedad con poliza
+        <br>
       operationId: Tr_novedad_poscontractualController.Post
       parameters:
       - in: body
@@ -871,20 +955,26 @@ paths:
         "400":
           description: the request contains incorrect syntax
 definitions:
-  33259.<nil>.Fechas:
+  33319.<nil>.Fechas:
     title: Fechas
     type: object
-  33293.<nil>.Propiedad:
+  33353.<nil>.Propiedad:
     title: Propiedad
     type: object
-  33467.<nil>.Fechas:
+  33390.<nil>.AprobacionFirma:
+    title: AprobacionFirma
+    type: object
+  33536.<nil>.Fechas:
     title: Fechas
     type: object
-  33501.<nil>.Propiedad:
+  33570.<nil>.Propiedad:
     title: Propiedad
     type: object
-  33538.<nil>.Poliza:
+  33607.<nil>.Poliza:
     title: Poliza
+    type: object
+  33641.<nil>.AprobacionFirma:
+    title: AprobacionFirma
     type: object
   models.Fechas:
     title: Fechas
@@ -916,6 +1006,8 @@ definitions:
       ContratoId:
         type: integer
         format: int64
+      EnlaceDocumento:
+        type: string
       Estado:
         type: string
       FechaCreacion:
@@ -1062,24 +1154,28 @@ definitions:
     title: TrNovedadesPoscontractuales
     type: object
     properties:
+      AprobacionFirma:
+        $ref: '#/definitions/33390.<nil>.AprobacionFirma'
       Fechas:
-        $ref: '#/definitions/33259.<nil>.Fechas'
+        $ref: '#/definitions/33319.<nil>.Fechas'
       NovedadPoscontractual:
         $ref: '#/definitions/models.NovedadesPoscontractuales'
       Propiedad:
-        $ref: '#/definitions/33293.<nil>.Propiedad'
+        $ref: '#/definitions/33353.<nil>.Propiedad'
   models.TrNovedadesPoscontractualesPoliza:
     title: TrNovedadesPoscontractualesPoliza
     type: object
     properties:
+      AprobacionFirma:
+        $ref: '#/definitions/33641.<nil>.AprobacionFirma'
       Fechas:
-        $ref: '#/definitions/33467.<nil>.Fechas'
+        $ref: '#/definitions/33536.<nil>.Fechas'
       NovedadPoscontractual:
         $ref: '#/definitions/models.NovedadesPoscontractuales'
       Poliza:
-        $ref: '#/definitions/33538.<nil>.Poliza'
+        $ref: '#/definitions/33607.<nil>.Poliza'
       Propiedad:
-        $ref: '#/definitions/33501.<nil>.Propiedad'
+        $ref: '#/definitions/33570.<nil>.Propiedad'
 tags:
 - name: novedades_poscontractuales
   description: |
@@ -1103,5 +1199,5 @@ tags:
   description: |
     TipoNovedadController operations for TipoNovedad
 - name: trNovedad
-  description: |2
-     Tr_novedad_poscontractualController operations for Tr_novedad_poscontractual
+  description: |
+    Tr_novedad_poscontractualController operations for Tr_novedad_poscontractual
