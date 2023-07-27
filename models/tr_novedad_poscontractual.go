@@ -11,7 +11,6 @@ type TrNovedadesPoscontractuales struct {
 	NovedadPoscontractual *NovedadesPoscontractuales
 	Fechas                *[]Fechas
 	Propiedad             *[]Propiedad
-	//Poliza                *Poliza
 }
 type TrNovedadesPoscontractualesPoliza struct {
 	NovedadPoscontractual *NovedadesPoscontractuales
