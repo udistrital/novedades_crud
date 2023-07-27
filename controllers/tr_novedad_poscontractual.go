@@ -3,7 +3,6 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
-	"strconv"
 
 	"github.com/udistrital/novedades_crud/models"
 
@@ -11,7 +10,7 @@ import (
 	"github.com/astaxie/beego/logs"
 )
 
-//  Tr_novedad_poscontractualController operations for Tr_novedad_poscontractual
+// Tr_novedad_poscontractualController operations for Tr_novedad_poscontractual
 type Tr_novedad_poscontractualController struct {
 	beego.Controller
 }
@@ -185,29 +184,29 @@ func (c *Tr_novedad_poscontractualController) PostPoliza() {
 // @Failure 403 :id is not int
 // @router /:id [put]
 func (c *Tr_novedad_poscontractualController) Put() {
-	idStr := c.Ctx.Input.Param(":id")
-	id, _ := strconv.ParseInt(idStr, 0, 64)
-	var v models.TrNovedadesPoscontractuales
+	// idStr := c.Ctx.Input.Param(":id")
+	// id, _ := strconv.ParseInt(idStr, 0, 64)
+	// var v models.TrNovedadesPoscontractuales
 
-	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
-		if numReg, err := models.UpdateTr_novedad_poscontractualById(int(id), &v); err == nil {
-			c.Ctx.Output.SetStatus(201)
-			// v.NovedadPoscontractual.Id = idNovedad
-			fmt.Println("Aqui se muestra el número de registros actualizados \n", numReg)
-			c.Data["json"] = v
-		} else {
-			logs.Error(err)
-			//c.Data["development"] = map[string]interface{}{"Code": "000", "Body": err.Error(), "Type": "error"}
-			c.Data["system"] = err
-			c.Abort("400")
-		}
-	} else {
-		logs.Error(err)
-		//c.Data["development"] = map[string]interface{}{"Code": "000", "Body": err.Error(), "Type": "error"}
-		c.Data["system"] = err
-		c.Abort("400")
-	}
-	c.ServeJSON()
+	// if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
+	// 	if numReg, err := models.UpdateTr_novedad_poscontractualById(int(id), &v); err == nil {
+	// 		c.Ctx.Output.SetStatus(201)
+	// 		// v.NovedadPoscontractual.Id = idNovedad
+	// 		fmt.Println("Aqui se muestra el número de registros actualizados \n", numReg)
+	// 		c.Data["json"] = v
+	// 	} else {
+	// 		logs.Error(err)
+	// 		//c.Data["development"] = map[string]interface{}{"Code": "000", "Body": err.Error(), "Type": "error"}
+	// 		c.Data["system"] = err
+	// 		c.Abort("400")
+	// 	}
+	// } else {
+	// 	logs.Error(err)
+	// 	//c.Data["development"] = map[string]interface{}{"Code": "000", "Body": err.Error(), "Type": "error"}
+	// 	c.Data["system"] = err
+	// 	c.Abort("400")
+	// }
+	// c.ServeJSON()
 }
 
 // // Delete ...
@@ -218,12 +217,12 @@ func (c *Tr_novedad_poscontractualController) Put() {
 // // @Failure 403 id is empty
 // // @router /:id [delete]
 func (c *Tr_novedad_poscontractualController) Delete() {
-	idStr := c.Ctx.Input.Param(":id")
-	id, _ := strconv.ParseInt(idStr, 0, 64)
-	if err := models.DeleteTr_novedad_poscontractual(int(id)); err == nil {
-		c.Data["json"] = "OK"
-	} else {
-		c.Data["json"] = err.Error()
-	}
-	c.ServeJSON()
+	// idStr := c.Ctx.Input.Param(":id")
+	// id, _ := strconv.ParseInt(idStr, 0, 64)
+	// if err := models.DeleteTr_novedad_poscontractual(int(id)); err == nil {
+	// 	c.Data["json"] = "OK"
+	// } else {
+	// 	c.Data["json"] = err.Error()
+	// }
+	// c.ServeJSON()
 }
