@@ -23,6 +23,8 @@ type NovedadesPoscontractuales struct {
 	FechaModificacion string `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
 	Activo            bool   `orm:"column(activo)"`
 	TipoNovedad       int    `orm:"column(tipo_novedad)"`
+	OficioSupervisor  string `orm:"column(oficio_supervisor)"`
+	OficioOrdenador   string `orm:"column(oficio_ordenador)"`
 	Estado            string `orm:"column(estado)"`
 	EnlaceDocumento   string `orm:"column(enlace_documento)"`
 }
