@@ -11,7 +11,6 @@ type TrNovedadesPoscontractuales struct {
 	NovedadPoscontractual *NovedadesPoscontractuales
 	Fechas                *[]Fechas
 	Propiedad             *[]Propiedad
-	//Poliza                *Poliza
 }
 type TrNovedadesPoscontractualesPoliza struct {
 	NovedadPoscontractual *NovedadesPoscontractuales
@@ -126,4 +125,54 @@ func AddTransaccionNovedadPoscontractualPoliza(m *TrNovedadesPoscontractualesPol
 	}
 
 	return nil, idnovedadregistro
+}
+
+func UpdateTr_novedad_poscontractualById(id int, m *TrNovedadesPoscontractuales) (num int, err error) {
+
+	o := orm.NewOrm()
+	v := NovedadesPoscontractuales{Id: m.NovedadPoscontractual.Id}
+
+	horaRegistro := time_bogota.TiempoBogotaFormato()
+	m.NovedadPoscontractual.FechaCreacion = horaRegistro
+	m.NovedadPoscontractual.FechaModificacion = horaRegistro
+
+	// ascertain id exists in the database
+	if err = o.Read(&v); err == nil {
+		var num int64
+		if num, err = o.Update(m); err == nil {
+			fmt.Println("Number of records updated in database:", num)
+			for _, v := range *m.Fechas {
+				if _, errTr := o.Update(v); errTr != nil {
+					err = errTr
+					fmt.Println(err)
+					_ = o.Rollback()
+					return 0, errTr
+				}
+			}
+
+			for _, v := range *m.Propiedad {
+				if _, errTr := o.Update(v); errTr != nil {
+					err = errTr
+					fmt.Println(err)
+					_ = o.Rollback()
+					return 0, errTr
+				}
+			}
+		}
+	}
+
+	return num, nil
+}
+
+func DeleteTr_novedad_poscontractual(id int) (err error) {
+	o := orm.NewOrm()
+	v := NovedadesPoscontractuales{Id: id}
+	// ascertain id exists in the database
+	if err = o.Read(&v); err == nil {
+		var num int64
+		if num, err = o.Delete(&NovedadesPoscontractuales{Id: id}); err == nil {
+			fmt.Println("Number of records deleted in database:", num)
+		}
+	}
+	return
 }
