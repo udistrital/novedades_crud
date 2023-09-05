@@ -1,7 +1,6 @@
 # novedades_crud
 El API provee la gestion de las diferentes novedades pos-contractuales sobre diferentes contratos.
 
-
 ## Especificaciones Técnicas
 
 ### Tecnologías Implementadas y Versiones
