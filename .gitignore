@@ -15,3 +15,5 @@ swagger/lang/
 swagger/lib/
 .scannerwork/
 .vscode/
+go.mod
+go.sum
