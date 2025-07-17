@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"github.com/udistrital/novedades_crud/models"
+	"github.com/udistrital/utils_oas/time_bogota"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
@@ -158,6 +159,7 @@ func (c *NovedadesPoscontractualesController) Put() {
 	id, _ := strconv.Atoi(idStr)
 	v := models.NovedadesPoscontractuales{Id: id}
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
+		v.FechaModificacion = time_bogota.TiempoBogotaFormato()
 		if err := models.UpdateNovedadesPoscontractualesById(&v); err == nil {
 			c.Data["json"] = v
 		} else {
