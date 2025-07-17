@@ -19,8 +19,8 @@ type NovedadesPoscontractuales struct {
 	Observacion       string `orm:"column(observacion);null"`
 	Vigencia          int    `orm:"column(vigencia)"`
 	VigenciaCdp       int    `orm:"column(vigencia_cdp)"`
-	FechaCreacion     string `orm:"column(fecha_creacion);type(timestamp without time zone)"`
-	FechaModificacion string `orm:"column(fecha_modificacion);type(timestamp without time zone)"`
+	FechaCreacion     string `orm:"auto_now_add;column(fecha_creacion);type(timestamp without time zone)"`
+	FechaModificacion string `orm:"auto_now;column(fecha_modificacion);type(timestamp without time zone)"`
 	Activo            bool   `orm:"column(activo)"`
 	TipoNovedad       int    `orm:"column(tipo_novedad)"`
 	OficioSupervisor  string `orm:"column(oficio_supervisor)"`
