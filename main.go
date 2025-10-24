@@ -31,8 +31,7 @@ func main() {
 			"origin",
 			"authorization",
 			"x-csrftoken"},
-		ExposeHeaders:    []string{"Content-Length"},
-		AllowCredentials: true,
+		ExposeHeaders: []string{"Content-Length"},
 	}))
 	beego.ErrorController(&customerror.CustomErrorController{})
 	xray.InitXRay()
