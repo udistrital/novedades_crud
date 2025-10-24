@@ -11,6 +11,7 @@ import (
 	_ "github.com/lib/pq"
 	apistatus "github.com/udistrital/utils_oas/apiStatusLib"
 	"github.com/udistrital/utils_oas/customerror"
+	"github.com/udistrital/utils_oas/security"
 	"github.com/udistrital/utils_oas/xray"
 )
 
@@ -36,5 +37,6 @@ func main() {
 	beego.ErrorController(&customerror.CustomErrorController{})
 	xray.InitXRay()
 	apistatus.Init()
+	security.SetSecurityHeaders()
 	beego.Run()
 }
